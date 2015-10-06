@@ -53,7 +53,7 @@
 	div.question_text{
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		color:#00a2ff;
 		min-width:30px;
@@ -77,7 +77,7 @@
 	div.ans_text{
 		float:right;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		color:#000000;
 		min-width:30px;
@@ -128,7 +128,7 @@
 	a.qabutton {
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		width:100%;
 		background: #eee;
@@ -144,7 +144,7 @@
 	a.qabutton:hover, a.qabutton:active {
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		width:100%;
 		background: #ddd;
@@ -174,7 +174,7 @@
 		float:left;
 		width:100%;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		background: #fff;
 		border-top-left-radius: 8px;
@@ -192,7 +192,7 @@
 		width:100%;
 		text-align:left;
 		font-family: Verdana, Geneva, sans-serif;
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 20px;
 		background: #eee;
 		border-radius: 8px;
@@ -266,8 +266,7 @@ X:mileage
 		A:No ,let's skip to the "Operating Expenses"
 			Q(5.1.2.2):GOTO:11
 		A[javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')]:No I'm done, take me to my summary.
-	A:Back
-		Q(5.1.3):GOTO:5
+
 A: How do I determine my mileage?
 	Q(5.2): Your Uber statements are a good start, but only show you a fraction of your deductible miles. From the moment you leave your driveway or parking spot to start driving for Uber, until you drop off your last passenger and return home, your total business miles are deductible.
 	A:Back
@@ -282,8 +281,6 @@ A: Yes, I'm a very organized person, let's proceed!
 	Q(6.1):GOTO:7
 A[javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')]:No, I'll stick to the Standard Mileage Method, take me to my summary.
 	
-A:Back
-	Q(6.3):GOTO:4
 
 Q(7):Ok great, let's go through the possible deductions.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png"&gt;Do you own or lease the vehicle that you use for Uber?
 A: Own
@@ -333,8 +330,7 @@ A:See Example
 	Q(8.2):Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 	A:Back
 		Q(8.2.1):GOTO:8
-A:Back
-	Q(8.3):GOTO:7
+
 
 Q(9): &lt;img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg"&gt;Maintenance Costs.&lt;br&gt;&lt;br&gt;Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.&lt;br&gt;&lt;br&gt;Enter your Maintenance Costs below, if none, type "0":
 X:maintenance
@@ -348,8 +344,7 @@ A:See Example
 	Q(9.2):In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 	A:Back
 		Q(9.2.1):GOTO:9
-A:Back
-	Q(9.3):GOTO:8
+
 
 Q(10):&lt;img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg"&gt;Car Insurance.&lt;br&gt;&lt;br&gt;Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.&lt;br&gt;&lt;br&gt;Enter your car insurance costs below:
 X:insurance
@@ -360,11 +355,10 @@ X:insurance
 	A:Continue
 		Q(10.1.2):GOTO:11
 A: See Example
-	Q(10.2):Ginaâ��s monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
+	Q(10.2):Mary's monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
 	A:Back
-		Q(10.2.1):GOTO:9
-A:Back
-	Q(10.3):GOTO:9
+		Q(10.2.1):GOTO:10
+
 
 Q(11):In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.&lt;br&gt;&lt;br&gt;You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 A:Next
@@ -401,8 +395,7 @@ A:See Example
 	Q(13.2):If 50% of your data and minutes are used when driving, that portion is deductible.
 	A:Back
 		Q(13.2.1):GOTO:13
-A:Back
-	Q(13.3):GOTO:12
+
 
 Q(14):&lt;img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif"&gt;Food & Drink for Customers.&lt;br&gt;&lt;br&gt;The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
 X:food
@@ -416,8 +409,7 @@ A:See Example
 	Q(14.2):Dominique likes to keep a cooler full of bottled water and soft drinks for her customers in her car. If she spent $500 on beverages in 2015, she will be able to deduct $250 of that.
 	A:Back
 		Q(14.2.1):GOTO:14
-A:Back
-	Q(14.3):GOTO:13
+
 
 Q(15): &lt;img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif"&gt;Car Washes.&lt;br&gt;&lt;br&gt;As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
 X:carwash
@@ -431,8 +423,7 @@ A:See Example
 	Q(15.2):John spent $40 to get his car professionally cleaned each month ($480 annually) and $150 on miscellaneous cleaning supplies, so his car was always clean for his passengers(and he could continue getting high ratings). John can then deduct $630 in expenses related to washing his car for 2015.
 	A:Back
 		Q(15.2.1):GOTO:15
-A:Back
-	Q(15.3):GOTO:14
+
 
 Q(16):&lt;img src="http://www.moreenergy.tv/aaa_sign_full.jpg"&gt;AAA Membership/Roadside Assistence.&lt;br&gt;&lt;br&gt;If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.&lt;br&gt;&lt;br&gt;Enter those costs below:
 X:aaa
@@ -446,8 +437,7 @@ A:See Example
 	Q(16.2):If Janet decided that it would benefit her driving business to have a AAA membership, she can deduct 100% of the membership cost.
 	A:Back
 		Q(16.2.1):GOTO:16
-A:Back
-	Q(16.3):GOTO:15
+
 
 Q(17):&lt;img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg"&gt;Parking Fees & Tolls.&lt;br&gt;&lt;br&gt; Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.&lt;br&gt;&lt;br&gt;Enter those total costs below:
 X:fees
@@ -461,15 +451,13 @@ A:See Example
 	Q(17.2):Each week, Sandra takes a trip to the grocery store to purchase food and drinks for her passengers. In order to do her shopping, she needs to pay the cost to park in the storeâ��s parking garage. Because these food and drinks are considered operating expenses, she can write off the parking garage fees.
 	A:Back
 		Q(17.2.1):GOTO:17
-A:Back
-	Q(17.3):GOTO:16
+
 
 Q(18):Now that we have gone through the common operating expenses as a driver for Uber, please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. I hope that I have helped you with your tax preparation.&lt;br&gt;&lt;br&gt;Would you like to see your Summary of Deductions?
 A[javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')]:Yes
 A:No, I made this all up.
 	Q(18.2):You sir, need a hobby.&lt;br&gt;&lt;br&gt; Have a Nice Day!
-A:Back
-	Q(18.3):GOTO:17
+
 	
 
 
@@ -510,7 +498,6 @@ A:Back
 </div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'> So now that we've determined your Standard Mileage Deduction, would you like to try the Actual Expenses Method?
 </div><div id='Q-5.1.2.1' name='Q-5.1.2.1' style='display:none;'>GOTO:6
 </div><div id='Q-5.1.2.2' name='Q-5.1.2.2' style='display:none;'>GOTO:11
-</div><div id='Q-5.1.3' name='Q-5.1.3' style='display:none;'>GOTO:5
 </div><div id='Q-5.2' name='Q-5.2' style='display:none;'> Your Uber statements are a good start, but only show you a fraction of your deductible miles. From the moment you leave your driveway or parking spot to start driving for Uber, until you drop off your last passenger and return home, your total business miles are deductible.
 </div><div id='Q-5.2.1' name='Q-5.2.1' style='display:none;'>GOTO:5
 	
@@ -519,8 +506,6 @@ A:Back
 </div><div id='Q-6' name='Q-6' style='display:none;'> The Actual Expenses Method is the alternative to the Standard Mileage Method that can likely raise your total deduction amount. This method however requires that you have kept track of what you have spent during the year to operate your vehicle and then deduct the percentage directly related to your Uber driving.<br><br> Have you kept track of your expenses?
 </div><div id='D-6.1' name='D-6.1' style='display:none;'>ACTUAL EXPENSES METHOD<br><br>Here are your deductions:<br><br>
 </div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7
-</div><div id='Q-6.3' name='Q-6.3' style='display:none;'>GOTO:4
-
 </div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br><img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png">Do you own or lease the vehicle that you use for Uber?
 </div><div id='Q-7.1' name='Q-7.1' style='display:none;'>Interest Deduction.<br><br>Since your vehicle is a crucial part of driving for Uber, you can deduct that part of the interest expense that represents your business use of the car. Enter that amount below:
 </div><div id='D-7.1.1' name='D-7.1.1' style='display:none;'> Interest Deduction - Your Auto Loan Interest of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.<br><br>
@@ -549,7 +534,7 @@ A:Back
 </div><div id='Q-8.1.2' name='Q-8.1.2' style='display:none;'>GOTO:9
 </div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 </div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:8
-</div><div id='Q-8.3' name='Q-8.3' style='display:none;'>GOTO:7
+
 
 </div><div id='Q-9' name='Q-9' style='display:none;'> <img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg">Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
 </div><div id='D-9.1' name='D-9.1' style='display:none;'>Auto Maintenance Expenses - Your costs totaling $<x>maintenance</x> in expenses will go on "line 9" of the Schedule C form 1040.<br><br>
@@ -558,16 +543,16 @@ A:Back
 </div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'>GOTO:10
 </div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 </div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:9
-</div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:8
+
 
 </div><div id='Q-10' name='Q-10' style='display:none;'><img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg">Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
 </div><div id='D-10.1' name='D-10.1' style='display:none;'> Car Insurance Costs - Your insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Your Insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'>GOTO:11
 </div><div id='Q-10.1.2' name='Q-10.1.2' style='display:none;'>GOTO:11
-</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>Ginaâ��s monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
-</div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:9
-</div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:9
+</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>Mary's monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
+</div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:10
+
 
 </div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 </div><div id='Q-11.1' name='Q-11.1' style='display:none;'>The IRS defines "ordinary and necessary" as the following: "An ordinary expense is one that is common and accepted in your industry. A necessary expense is one that is helpful and appropriate for your trade or business. An expense does not have to be indispensable to be considered necessary." <br><br>This may sound complicated, but I'll break the common individual deductions down for you now, so you do not have to untangle the terminology on your own.
@@ -589,7 +574,7 @@ A:Back
 </div><div id='Q-13.1.2' name='Q-13.1.2' style='display:none;'>GOTO:14
 </div><div id='Q-13.2' name='Q-13.2' style='display:none;'>If 50% of your data and minutes are used when driving, that portion is deductible.
 </div><div id='Q-13.2.1' name='Q-13.2.1' style='display:none;'>GOTO:13
-</div><div id='Q-13.3' name='Q-13.3' style='display:none;'>GOTO:12
+
 
 </div><div id='Q-14' name='Q-14' style='display:none;'><img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif">Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-14.1' name='D-14.1' style='display:none;'> Food & Drink Expenses - Your total costs for food and drinks for customers of $<x>food</x> will go on "line 24b" of Schedule C form 1040.<br><br>
@@ -598,7 +583,7 @@ A:Back
 </div><div id='Q-14.1.2' name='Q-14.1.2' style='display:none;'>GOTO:15
 </div><div id='Q-14.2' name='Q-14.2' style='display:none;'>Dominique likes to keep a cooler full of bottled water and soft drinks for her customers in her car. If she spent $500 on beverages in 2015, she will be able to deduct $250 of that.
 </div><div id='Q-14.2.1' name='Q-14.2.1' style='display:none;'>GOTO:14
-</div><div id='Q-14.3' name='Q-14.3' style='display:none;'>GOTO:13
+
 
 </div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif">Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-15.1' name='D-15.1' style='display:none;'>Car Wash Expenses - Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.<br><br>
@@ -607,7 +592,7 @@ A:Back
 </div><div id='Q-15.1.2' name='Q-15.1.2' style='display:none;'>GOTO:16
 </div><div id='Q-15.2' name='Q-15.2' style='display:none;'>John spent $40 to get his car professionally cleaned each month ($480 annually) and $150 on miscellaneous cleaning supplies, so his car was always clean for his passengers(and he could continue getting high ratings). John can then deduct $630 in expenses related to washing his car for 2015.
 </div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'>GOTO:15
-</div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:14
+
 
 </div><div id='Q-16' name='Q-16' style='display:none;'><img src="http://www.moreenergy.tv/aaa_sign_full.jpg">AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
 </div><div id='D-16.1' name='D-16.1' style='display:none;'>AAA Membership/Roadside Assistance Programs - Your membership costs totaling $<x>aaa</x> will go on "line 9" of Schedule C form 1040.<br><br>
@@ -616,7 +601,7 @@ A:Back
 </div><div id='Q-16.1.2' name='Q-16.1.2' style='display:none;'>GOTO:17
 </div><div id='Q-16.2' name='Q-16.2' style='display:none;'>If Janet decided that it would benefit her driving business to have a AAA membership, she can deduct 100% of the membership cost.
 </div><div id='Q-16.2.1' name='Q-16.2.1' style='display:none;'>GOTO:16
-</div><div id='Q-16.3' name='Q-16.3' style='display:none;'>GOTO:15
+
 
 </div><div id='Q-17' name='Q-17' style='display:none;'><img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg">Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
 </div><div id='D-17.1' name='D-17.1' style='display:none;'> Parking Fees & Tolls - Your total fees in the amount of $<x>fees</x> will go on "line 9" of Schedule C form 1040.<br><br>*Please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. It is advised that you consult an Accounting Service if you feel you may have a deduction not listed here.<br><br>Thank You for using The Uber Driver Tax Prepper: Knowing your Deductions!
@@ -625,11 +610,11 @@ A:Back
 </div><div id='Q-17.1.2' name='Q-17.1.2' style='display:none;'>GOTO:18
 </div><div id='Q-17.2' name='Q-17.2' style='display:none;'>Each week, Sandra takes a trip to the grocery store to purchase food and drinks for her passengers. In order to do her shopping, she needs to pay the cost to park in the storeâ��s parking garage. Because these food and drinks are considered operating expenses, she can write off the parking garage fees.
 </div><div id='Q-17.2.1' name='Q-17.2.1' style='display:none;'>GOTO:17
-</div><div id='Q-17.3' name='Q-17.3' style='display:none;'>GOTO:16
+
 
 </div><div id='Q-18' name='Q-18' style='display:none;'>Now that we have gone through the common operating expenses as a driver for Uber, please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. I hope that I have helped you with your tax preparation.<br><br>Would you like to see your Summary of Deductions?
 </div><div id='Q-18.2' name='Q-18.2' style='display:none;'>You sir, need a hobby.<br><br> Have a Nice Day!
-</div><div id='Q-18.3' name='Q-18.3' style='display:none;'>GOTO:17
+
 	
 
 
@@ -660,15 +645,15 @@ A:Back
 </div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'></div><div id='A-5.1.2.1' name='A-5.1.2.1' style='display:none;'>Yes
 </div><div id='A-href-5.1.2.1' name='A-href-5.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2.1' name='A-target-5.1.2.1' style='display:none;'></div><div id='X-5.1.2.1' name='X-5.1.2.1' style='display:none;'></div><div id='A-5.1.2.2' name='A-5.1.2.2' style='display:none;'>No ,let's skip to the "Operating Expenses"
 </div><div id='A-href-5.1.2.2' name='A-href-5.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2.2' name='A-target-5.1.2.2' style='display:none;'></div><div id='X-5.1.2.2' name='X-5.1.2.2' style='display:none;'></div><div id='A-5.1.2.3' name='A-5.1.2.3' style='display:none;'>No I'm done, take me to my summary.
-</div><div id='A-href-5.1.2.3' name='A-href-5.1.2.3' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-5.1.2.3' name='A-target-5.1.2.3' style='display:none;'></div><div id='X-5.1.2.3' name='X-5.1.2.3' style='display:none;'></div><div id='A-5.1.3' name='A-5.1.3' style='display:none;'>Back
-</div><div id='A-href-5.1.3' name='A-href-5.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.3' name='A-target-5.1.3' style='display:none;'></div><div id='X-5.1.3' name='X-5.1.3' style='display:none;'></div><div id='A-5.2' name='A-5.2' style='display:none;'> How do I determine my mileage?
+
+</div><div id='A-href-5.1.2.3' name='A-href-5.1.2.3' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-5.1.2.3' name='A-target-5.1.2.3' style='display:none;'></div><div id='X-5.1.2.3' name='X-5.1.2.3' style='display:none;'></div><div id='A-5.2' name='A-5.2' style='display:none;'> How do I determine my mileage?
 </div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'></div><div id='A-5.2.1' name='A-5.2.1' style='display:none;'>Back
 </div><div id='A-href-5.2.1' name='A-href-5.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.1' name='A-target-5.2.1' style='display:none;'></div><div id='X-5.2.1' name='X-5.2.1' style='display:none;'></div><div id='A-5.3' name='A-5.3' style='display:none;'> Back
 </div><div id='A-href-5.3' name='A-href-5.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.3' name='A-target-5.3' style='display:none;'></div><div id='X-5.3' name='X-5.3' style='display:none;'></div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes, I'm a very organized person, let's proceed!
 </div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'></div><div id='A-6.2' name='A-6.2' style='display:none;'>No, I'll stick to the Standard Mileage Method, take me to my summary.
 	
-</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'></div><div id='A-6.3' name='A-6.3' style='display:none;'>Back
-</div><div id='A-href-6.3' name='A-href-6.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3' name='A-target-6.3' style='display:none;'></div><div id='X-6.3' name='X-6.3' style='display:none;'></div><div id='A-7.1' name='A-7.1' style='display:none;'> Own
+
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'></div><div id='A-7.1' name='A-7.1' style='display:none;'> Own
 </div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'></div><div id='A-7.1.1' name='A-7.1.1' style='display:none;'><variable></div><div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'></div><div id='X-7.1.1' name='X-7.1.1' style='display:none;'>interest</div><div id='A-7.1.1.1' name='A-7.1.1.1' style='display:none;'>See Example	
 </div><div id='A-href-7.1.1.1' name='A-href-7.1.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/04-deduction.png</div><div id='A-target-7.1.1.1' name='A-target-7.1.1.1' style='display:none;'>target="_blank"</div><div id='X-7.1.1.1' name='X-7.1.1.1' style='display:none;'></div><div id='A-7.1.1.2' name='A-7.1.1.2' style='display:none;'>Continue
 </div><div id='A-href-7.1.1.2' name='A-href-7.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1.2' name='A-target-7.1.1.2' style='display:none;'></div><div id='X-7.1.1.2' name='X-7.1.1.2' style='display:none;'></div><div id='A-7.1.2' name='A-7.1.2' style='display:none;'>See Example
@@ -685,18 +670,15 @@ A:Back
 </div><div id='A-href-8.1.1' name='A-href-8.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-8.1.1' name='A-target-8.1.1' style='display:none;'>target="_blank"</div><div id='X-8.1.1' name='X-8.1.1' style='display:none;'></div><div id='A-8.1.2' name='A-8.1.2' style='display:none;'>Continue
 </div><div id='A-href-8.1.2' name='A-href-8.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.1.2' name='A-target-8.1.2' style='display:none;'></div><div id='X-8.1.2' name='X-8.1.2' style='display:none;'></div><div id='A-8.2' name='A-8.2' style='display:none;'>See Example
 </div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'></div><div id='A-8.2.1' name='A-8.2.1' style='display:none;'>Back
-</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'></div><div id='A-8.3' name='A-8.3' style='display:none;'>Back
-</div><div id='A-href-8.3' name='A-href-8.3' style='display:none;'>javascript:void('');</div><div id='A-target-8.3' name='A-target-8.3' style='display:none;'></div><div id='X-8.3' name='X-8.3' style='display:none;'></div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>maintenance</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'>See Example
+</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'></div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>maintenance</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'>See Example
 </div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'>target="_blank"</div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'></div><div id='A-9.1.2' name='A-9.1.2' style='display:none;'>Continue
 </div><div id='A-href-9.1.2' name='A-href-9.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2' name='A-target-9.1.2' style='display:none;'></div><div id='X-9.1.2' name='X-9.1.2' style='display:none;'></div><div id='A-9.2' name='A-9.2' style='display:none;'>See Example
 </div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'></div><div id='A-9.2.1' name='A-9.2.1' style='display:none;'>Back
-</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'></div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'></div><div id='A-9.3' name='A-9.3' style='display:none;'>Back
-</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'></div><div id='X-9.3' name='X-9.3' style='display:none;'></div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>insurance</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'>See Example
+</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'></div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'></div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>insurance</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'>See Example
 </div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>target="_blank"</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'></div><div id='A-10.1.2' name='A-10.1.2' style='display:none;'>Continue
 </div><div id='A-href-10.1.2' name='A-href-10.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.2' name='A-target-10.1.2' style='display:none;'></div><div id='X-10.1.2' name='X-10.1.2' style='display:none;'></div><div id='A-10.2' name='A-10.2' style='display:none;'> See Example
 </div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'></div><div id='A-10.2.1' name='A-10.2.1' style='display:none;'>Back
-</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'></div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'></div><div id='A-10.3' name='A-10.3' style='display:none;'>Back
-</div><div id='A-href-10.3' name='A-href-10.3' style='display:none;'>javascript:void('');</div><div id='A-target-10.3' name='A-target-10.3' style='display:none;'></div><div id='X-10.3' name='X-10.3' style='display:none;'></div><div id='A-11.1' name='A-11.1' style='display:none;'>Next
+</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'></div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'></div><div id='A-11.1' name='A-11.1' style='display:none;'>Next
 </div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'></div><div id='A-11.1.1' name='A-11.1.1' style='display:none;'>Next	
 </div><div id='A-href-11.1.1' name='A-href-11.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.1' name='A-target-11.1.1' style='display:none;'></div><div id='X-11.1.1' name='X-11.1.1' style='display:none;'></div><div id='A-11.1.2' name='A-11.1.2' style='display:none;'>I don't have any more expenses, please take me to my summary.
 
@@ -709,31 +691,25 @@ A:Back
 </div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/10-deduction.png</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'>target="_blank"</div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'></div><div id='A-13.1.2' name='A-13.1.2' style='display:none;'>Continue
 </div><div id='A-href-13.1.2' name='A-href-13.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.2' name='A-target-13.1.2' style='display:none;'></div><div id='X-13.1.2' name='X-13.1.2' style='display:none;'></div><div id='A-13.2' name='A-13.2' style='display:none;'>See Example
 </div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'></div><div id='A-13.2.1' name='A-13.2.1' style='display:none;'>Back
-</div><div id='A-href-13.2.1' name='A-href-13.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.2.1' name='A-target-13.2.1' style='display:none;'></div><div id='X-13.2.1' name='X-13.2.1' style='display:none;'></div><div id='A-13.3' name='A-13.3' style='display:none;'>Back
-</div><div id='A-href-13.3' name='A-href-13.3' style='display:none;'>javascript:void('');</div><div id='A-target-13.3' name='A-target-13.3' style='display:none;'></div><div id='X-13.3' name='X-13.3' style='display:none;'></div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>food</div><div id='A-14.1.1' name='A-14.1.1' style='display:none;'>See Example
+</div><div id='A-href-13.2.1' name='A-href-13.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.2.1' name='A-target-13.2.1' style='display:none;'></div><div id='X-13.2.1' name='X-13.2.1' style='display:none;'></div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>food</div><div id='A-14.1.1' name='A-14.1.1' style='display:none;'>See Example
 </div><div id='A-href-14.1.1' name='A-href-14.1.1' style='display:none;'>http://i2.wp.com/hurdlr.com/wp-content/uploads/2015/03/11-deduction.png</div><div id='A-target-14.1.1' name='A-target-14.1.1' style='display:none;'>target="_blank"</div><div id='X-14.1.1' name='X-14.1.1' style='display:none;'></div><div id='A-14.1.2' name='A-14.1.2' style='display:none;'>Continue
 </div><div id='A-href-14.1.2' name='A-href-14.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.1.2' name='A-target-14.1.2' style='display:none;'></div><div id='X-14.1.2' name='X-14.1.2' style='display:none;'></div><div id='A-14.2' name='A-14.2' style='display:none;'>See Example
 </div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'></div><div id='A-14.2.1' name='A-14.2.1' style='display:none;'>Back
-</div><div id='A-href-14.2.1' name='A-href-14.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.2.1' name='A-target-14.2.1' style='display:none;'></div><div id='X-14.2.1' name='X-14.2.1' style='display:none;'></div><div id='A-14.3' name='A-14.3' style='display:none;'>Back
-</div><div id='A-href-14.3' name='A-href-14.3' style='display:none;'>javascript:void('');</div><div id='A-target-14.3' name='A-target-14.3' style='display:none;'></div><div id='X-14.3' name='X-14.3' style='display:none;'></div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>carwash</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'>See Example
+</div><div id='A-href-14.2.1' name='A-href-14.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.2.1' name='A-target-14.2.1' style='display:none;'></div><div id='X-14.2.1' name='X-14.2.1' style='display:none;'></div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>carwash</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'>See Example
 </div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'>target="_blank"</div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'></div><div id='A-15.1.2' name='A-15.1.2' style='display:none;'>Continue
 </div><div id='A-href-15.1.2' name='A-href-15.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.2' name='A-target-15.1.2' style='display:none;'></div><div id='X-15.1.2' name='X-15.1.2' style='display:none;'></div><div id='A-15.2' name='A-15.2' style='display:none;'>See Example
 </div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'></div><div id='A-15.2.1' name='A-15.2.1' style='display:none;'>Back
-</div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'></div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'></div><div id='A-15.3' name='A-15.3' style='display:none;'>Back
-</div><div id='A-href-15.3' name='A-href-15.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.3' name='A-target-15.3' style='display:none;'></div><div id='X-15.3' name='X-15.3' style='display:none;'></div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>aaa</div><div id='A-16.1.1' name='A-16.1.1' style='display:none;'>See Example
+</div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'></div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'></div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>aaa</div><div id='A-16.1.1' name='A-16.1.1' style='display:none;'>See Example
 </div><div id='A-href-16.1.1' name='A-href-16.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-16.1.1' name='A-target-16.1.1' style='display:none;'>target="_blank"</div><div id='X-16.1.1' name='X-16.1.1' style='display:none;'></div><div id='A-16.1.2' name='A-16.1.2' style='display:none;'>Continue
 </div><div id='A-href-16.1.2' name='A-href-16.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.1.2' name='A-target-16.1.2' style='display:none;'></div><div id='X-16.1.2' name='X-16.1.2' style='display:none;'></div><div id='A-16.2' name='A-16.2' style='display:none;'>See Example
 </div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'></div><div id='A-16.2.1' name='A-16.2.1' style='display:none;'>Back
-</div><div id='A-href-16.2.1' name='A-href-16.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.2.1' name='A-target-16.2.1' style='display:none;'></div><div id='X-16.2.1' name='X-16.2.1' style='display:none;'></div><div id='A-16.3' name='A-16.3' style='display:none;'>Back
-</div><div id='A-href-16.3' name='A-href-16.3' style='display:none;'>javascript:void('');</div><div id='A-target-16.3' name='A-target-16.3' style='display:none;'></div><div id='X-16.3' name='X-16.3' style='display:none;'></div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>fees</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'>See Example
+</div><div id='A-href-16.2.1' name='A-href-16.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.2.1' name='A-target-16.2.1' style='display:none;'></div><div id='X-16.2.1' name='X-16.2.1' style='display:none;'></div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>fees</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'>See Example
 </div><div id='A-href-17.1.1' name='A-href-17.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-17.1.1' name='A-target-17.1.1' style='display:none;'>target="_blank"</div><div id='X-17.1.1' name='X-17.1.1' style='display:none;'></div><div id='A-17.1.2' name='A-17.1.2' style='display:none;'>Continue
 </div><div id='A-href-17.1.2' name='A-href-17.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2' name='A-target-17.1.2' style='display:none;'></div><div id='X-17.1.2' name='X-17.1.2' style='display:none;'></div><div id='A-17.2' name='A-17.2' style='display:none;'>See Example
 </div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'></div><div id='A-17.2.1' name='A-17.2.1' style='display:none;'>Back
-</div><div id='A-href-17.2.1' name='A-href-17.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.2.1' name='A-target-17.2.1' style='display:none;'></div><div id='X-17.2.1' name='X-17.2.1' style='display:none;'></div><div id='A-17.3' name='A-17.3' style='display:none;'>Back
-</div><div id='A-href-17.3' name='A-href-17.3' style='display:none;'>javascript:void('');</div><div id='A-target-17.3' name='A-target-17.3' style='display:none;'></div><div id='X-17.3' name='X-17.3' style='display:none;'></div><div id='A-18.1' name='A-18.1' style='display:none;'>Yes
+</div><div id='A-href-17.2.1' name='A-href-17.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.2.1' name='A-target-17.2.1' style='display:none;'></div><div id='X-17.2.1' name='X-17.2.1' style='display:none;'></div><div id='A-18.1' name='A-18.1' style='display:none;'>Yes
 </div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'></div><div id='A-18.2' name='A-18.2' style='display:none;'>No, I made this all up.
-</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'></div><div id='A-18.3' name='A-18.3' style='display:none;'>Back
-</div><div id='A-href-18.3' name='A-href-18.3' style='display:none;'>javascript:void('');</div><div id='A-target-18.3' name='A-target-18.3' style='display:none;'></div><div id='X-18.3' name='X-18.3' style='display:none;'></div></div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'>Are you a driver for Uber?<br><br><img src="http://itmakessenseblog.com/files/2015/06/uber-logo.png">
+</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'></div></div><textarea id="original" name="original" style="display:none;" disabled="disabled"><div id="doc" name="doc" style="display:none;"></div><div id='Q-1' name='Q-1' style='display:none;'>Are you a driver for Uber?<br><br><img src="http://itmakessenseblog.com/files/2015/06/uber-logo.png">
 </div><div id='D-1.1' name='D-1.1' style='display:none;'><img src="http://www.ceec.uitp.org/sites/default/files/Uber-Logo-220x146.jpg"><br><br>THE UBER DRIVER TAX PREPPER: KNOWING YOUR DEDUCTIONS<br><br> Disclaimer:The information contained in this document is provided for informational purposes only and should not be construed as financial or tax advice. It is not intended to be a substitute for obtaining accounting or other financial advice from appropriate financial advisor or for the purpose of avoiding U.S. Federal,state, or local tax payments and penalties.<br><br>Here is your Summary of Deductions for Tax Year 2015.<br><br>
 </div><div id='Q-1.1' name='Q-1.1' style='display:none;'>Great!, then you've come to the right place let's get started
 </div><div id='Q-1.1.1' name='Q-1.1.1' style='display:none;'>GOTO:2
@@ -765,7 +741,6 @@ A:Back
 </div><div id='Q-5.1.2' name='Q-5.1.2' style='display:none;'> So now that we've determined your Standard Mileage Deduction, would you like to try the Actual Expenses Method?
 </div><div id='Q-5.1.2.1' name='Q-5.1.2.1' style='display:none;'>GOTO:6
 </div><div id='Q-5.1.2.2' name='Q-5.1.2.2' style='display:none;'>GOTO:11
-</div><div id='Q-5.1.3' name='Q-5.1.3' style='display:none;'>GOTO:5
 </div><div id='Q-5.2' name='Q-5.2' style='display:none;'> Your Uber statements are a good start, but only show you a fraction of your deductible miles. From the moment you leave your driveway or parking spot to start driving for Uber, until you drop off your last passenger and return home, your total business miles are deductible.
 </div><div id='Q-5.2.1' name='Q-5.2.1' style='display:none;'>GOTO:5
 	
@@ -774,8 +749,6 @@ A:Back
 </div><div id='Q-6' name='Q-6' style='display:none;'> The Actual Expenses Method is the alternative to the Standard Mileage Method that can likely raise your total deduction amount. This method however requires that you have kept track of what you have spent during the year to operate your vehicle and then deduct the percentage directly related to your Uber driving.<br><br> Have you kept track of your expenses?
 </div><div id='D-6.1' name='D-6.1' style='display:none;'>ACTUAL EXPENSES METHOD<br><br>Here are your deductions:<br><br>
 </div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7
-</div><div id='Q-6.3' name='Q-6.3' style='display:none;'>GOTO:4
-
 </div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br><img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png">Do you own or lease the vehicle that you use for Uber?
 </div><div id='Q-7.1' name='Q-7.1' style='display:none;'>Interest Deduction.<br><br>Since your vehicle is a crucial part of driving for Uber, you can deduct that part of the interest expense that represents your business use of the car. Enter that amount below:
 </div><div id='D-7.1.1' name='D-7.1.1' style='display:none;'> Interest Deduction - Your Auto Loan Interest of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.<br><br>
@@ -804,7 +777,7 @@ A:Back
 </div><div id='Q-8.1.2' name='Q-8.1.2' style='display:none;'>GOTO:9
 </div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 </div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:8
-</div><div id='Q-8.3' name='Q-8.3' style='display:none;'>GOTO:7
+
 
 </div><div id='Q-9' name='Q-9' style='display:none;'> <img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg">Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
 </div><div id='D-9.1' name='D-9.1' style='display:none;'>Auto Maintenance Expenses - Your costs totaling $<x>maintenance</x> in expenses will go on "line 9" of the Schedule C form 1040.<br><br>
@@ -813,16 +786,16 @@ A:Back
 </div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'>GOTO:10
 </div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 </div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:9
-</div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:8
+
 
 </div><div id='Q-10' name='Q-10' style='display:none;'><img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg">Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
 </div><div id='D-10.1' name='D-10.1' style='display:none;'> Car Insurance Costs - Your insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Your Insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'>GOTO:11
 </div><div id='Q-10.1.2' name='Q-10.1.2' style='display:none;'>GOTO:11
-</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>Ginaâ��s monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
-</div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:9
-</div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:9
+</div><div id='Q-10.2' name='Q-10.2' style='display:none;'>Mary's monthly auto insurance payment is $135, or $1,620 per year. If Gina uses her car 30% of the time for driving for Uber, then she can deduct $486 on her tax return ( .3 x 1,620 = 486).
+</div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:10
+
 
 </div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 </div><div id='Q-11.1' name='Q-11.1' style='display:none;'>The IRS defines "ordinary and necessary" as the following: "An ordinary expense is one that is common and accepted in your industry. A necessary expense is one that is helpful and appropriate for your trade or business. An expense does not have to be indispensable to be considered necessary." <br><br>This may sound complicated, but I'll break the common individual deductions down for you now, so you do not have to untangle the terminology on your own.
@@ -844,7 +817,7 @@ A:Back
 </div><div id='Q-13.1.2' name='Q-13.1.2' style='display:none;'>GOTO:14
 </div><div id='Q-13.2' name='Q-13.2' style='display:none;'>If 50% of your data and minutes are used when driving, that portion is deductible.
 </div><div id='Q-13.2.1' name='Q-13.2.1' style='display:none;'>GOTO:13
-</div><div id='Q-13.3' name='Q-13.3' style='display:none;'>GOTO:12
+
 
 </div><div id='Q-14' name='Q-14' style='display:none;'><img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif">Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-14.1' name='D-14.1' style='display:none;'> Food & Drink Expenses - Your total costs for food and drinks for customers of $<x>food</x> will go on "line 24b" of Schedule C form 1040.<br><br>
@@ -853,7 +826,7 @@ A:Back
 </div><div id='Q-14.1.2' name='Q-14.1.2' style='display:none;'>GOTO:15
 </div><div id='Q-14.2' name='Q-14.2' style='display:none;'>Dominique likes to keep a cooler full of bottled water and soft drinks for her customers in her car. If she spent $500 on beverages in 2015, she will be able to deduct $250 of that.
 </div><div id='Q-14.2.1' name='Q-14.2.1' style='display:none;'>GOTO:14
-</div><div id='Q-14.3' name='Q-14.3' style='display:none;'>GOTO:13
+
 
 </div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif">Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-15.1' name='D-15.1' style='display:none;'>Car Wash Expenses - Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.<br><br>
@@ -862,7 +835,7 @@ A:Back
 </div><div id='Q-15.1.2' name='Q-15.1.2' style='display:none;'>GOTO:16
 </div><div id='Q-15.2' name='Q-15.2' style='display:none;'>John spent $40 to get his car professionally cleaned each month ($480 annually) and $150 on miscellaneous cleaning supplies, so his car was always clean for his passengers(and he could continue getting high ratings). John can then deduct $630 in expenses related to washing his car for 2015.
 </div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'>GOTO:15
-</div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:14
+
 
 </div><div id='Q-16' name='Q-16' style='display:none;'><img src="http://www.moreenergy.tv/aaa_sign_full.jpg">AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
 </div><div id='D-16.1' name='D-16.1' style='display:none;'>AAA Membership/Roadside Assistance Programs - Your membership costs totaling $<x>aaa</x> will go on "line 9" of Schedule C form 1040.<br><br>
@@ -871,7 +844,7 @@ A:Back
 </div><div id='Q-16.1.2' name='Q-16.1.2' style='display:none;'>GOTO:17
 </div><div id='Q-16.2' name='Q-16.2' style='display:none;'>If Janet decided that it would benefit her driving business to have a AAA membership, she can deduct 100% of the membership cost.
 </div><div id='Q-16.2.1' name='Q-16.2.1' style='display:none;'>GOTO:16
-</div><div id='Q-16.3' name='Q-16.3' style='display:none;'>GOTO:15
+
 
 </div><div id='Q-17' name='Q-17' style='display:none;'><img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg">Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
 </div><div id='D-17.1' name='D-17.1' style='display:none;'> Parking Fees & Tolls - Your total fees in the amount of $<x>fees</x> will go on "line 9" of Schedule C form 1040.<br><br>*Please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. It is advised that you consult an Accounting Service if you feel you may have a deduction not listed here.<br><br>Thank You for using The Uber Driver Tax Prepper: Knowing your Deductions!
@@ -880,11 +853,11 @@ A:Back
 </div><div id='Q-17.1.2' name='Q-17.1.2' style='display:none;'>GOTO:18
 </div><div id='Q-17.2' name='Q-17.2' style='display:none;'>Each week, Sandra takes a trip to the grocery store to purchase food and drinks for her passengers. In order to do her shopping, she needs to pay the cost to park in the storeâ��s parking garage. Because these food and drinks are considered operating expenses, she can write off the parking garage fees.
 </div><div id='Q-17.2.1' name='Q-17.2.1' style='display:none;'>GOTO:17
-</div><div id='Q-17.3' name='Q-17.3' style='display:none;'>GOTO:16
+
 
 </div><div id='Q-18' name='Q-18' style='display:none;'>Now that we have gone through the common operating expenses as a driver for Uber, please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. I hope that I have helped you with your tax preparation.<br><br>Would you like to see your Summary of Deductions?
 </div><div id='Q-18.2' name='Q-18.2' style='display:none;'>You sir, need a hobby.<br><br> Have a Nice Day!
-</div><div id='Q-18.3' name='Q-18.3' style='display:none;'>GOTO:17
+
 	
 
 
@@ -915,15 +888,15 @@ A:Back
 </div><div id='A-href-5.1.2' name='A-href-5.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2' name='A-target-5.1.2' style='display:none;'></div><div id='X-5.1.2' name='X-5.1.2' style='display:none;'></div><div id='A-5.1.2.1' name='A-5.1.2.1' style='display:none;'>Yes
 </div><div id='A-href-5.1.2.1' name='A-href-5.1.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2.1' name='A-target-5.1.2.1' style='display:none;'></div><div id='X-5.1.2.1' name='X-5.1.2.1' style='display:none;'></div><div id='A-5.1.2.2' name='A-5.1.2.2' style='display:none;'>No ,let's skip to the "Operating Expenses"
 </div><div id='A-href-5.1.2.2' name='A-href-5.1.2.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.2.2' name='A-target-5.1.2.2' style='display:none;'></div><div id='X-5.1.2.2' name='X-5.1.2.2' style='display:none;'></div><div id='A-5.1.2.3' name='A-5.1.2.3' style='display:none;'>No I'm done, take me to my summary.
-</div><div id='A-href-5.1.2.3' name='A-href-5.1.2.3' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-5.1.2.3' name='A-target-5.1.2.3' style='display:none;'></div><div id='X-5.1.2.3' name='X-5.1.2.3' style='display:none;'></div><div id='A-5.1.3' name='A-5.1.3' style='display:none;'>Back
-</div><div id='A-href-5.1.3' name='A-href-5.1.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.1.3' name='A-target-5.1.3' style='display:none;'></div><div id='X-5.1.3' name='X-5.1.3' style='display:none;'></div><div id='A-5.2' name='A-5.2' style='display:none;'> How do I determine my mileage?
+
+</div><div id='A-href-5.1.2.3' name='A-href-5.1.2.3' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-5.1.2.3' name='A-target-5.1.2.3' style='display:none;'></div><div id='X-5.1.2.3' name='X-5.1.2.3' style='display:none;'></div><div id='A-5.2' name='A-5.2' style='display:none;'> How do I determine my mileage?
 </div><div id='A-href-5.2' name='A-href-5.2' style='display:none;'>javascript:void('');</div><div id='A-target-5.2' name='A-target-5.2' style='display:none;'></div><div id='X-5.2' name='X-5.2' style='display:none;'></div><div id='A-5.2.1' name='A-5.2.1' style='display:none;'>Back
 </div><div id='A-href-5.2.1' name='A-href-5.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-5.2.1' name='A-target-5.2.1' style='display:none;'></div><div id='X-5.2.1' name='X-5.2.1' style='display:none;'></div><div id='A-5.3' name='A-5.3' style='display:none;'> Back
 </div><div id='A-href-5.3' name='A-href-5.3' style='display:none;'>javascript:void('');</div><div id='A-target-5.3' name='A-target-5.3' style='display:none;'></div><div id='X-5.3' name='X-5.3' style='display:none;'></div><div id='A-6.1' name='A-6.1' style='display:none;'> Yes, I'm a very organized person, let's proceed!
 </div><div id='A-href-6.1' name='A-href-6.1' style='display:none;'>javascript:void('');</div><div id='A-target-6.1' name='A-target-6.1' style='display:none;'></div><div id='X-6.1' name='X-6.1' style='display:none;'></div><div id='A-6.2' name='A-6.2' style='display:none;'>No, I'll stick to the Standard Mileage Method, take me to my summary.
 	
-</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'></div><div id='A-6.3' name='A-6.3' style='display:none;'>Back
-</div><div id='A-href-6.3' name='A-href-6.3' style='display:none;'>javascript:void('');</div><div id='A-target-6.3' name='A-target-6.3' style='display:none;'></div><div id='X-6.3' name='X-6.3' style='display:none;'></div><div id='A-7.1' name='A-7.1' style='display:none;'> Own
+
+</div><div id='A-href-6.2' name='A-href-6.2' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-6.2' name='A-target-6.2' style='display:none;'></div><div id='X-6.2' name='X-6.2' style='display:none;'></div><div id='A-7.1' name='A-7.1' style='display:none;'> Own
 </div><div id='A-href-7.1' name='A-href-7.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1' name='A-target-7.1' style='display:none;'></div><div id='X-7.1' name='X-7.1' style='display:none;'></div><div id='A-7.1.1' name='A-7.1.1' style='display:none;'><variable></div><div id='A-href-7.1.1' name='A-href-7.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1' name='A-target-7.1.1' style='display:none;'></div><div id='X-7.1.1' name='X-7.1.1' style='display:none;'>interest</div><div id='A-7.1.1.1' name='A-7.1.1.1' style='display:none;'>See Example	
 </div><div id='A-href-7.1.1.1' name='A-href-7.1.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/04-deduction.png</div><div id='A-target-7.1.1.1' name='A-target-7.1.1.1' style='display:none;'>target="_blank"</div><div id='X-7.1.1.1' name='X-7.1.1.1' style='display:none;'></div><div id='A-7.1.1.2' name='A-7.1.1.2' style='display:none;'>Continue
 </div><div id='A-href-7.1.1.2' name='A-href-7.1.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-7.1.1.2' name='A-target-7.1.1.2' style='display:none;'></div><div id='X-7.1.1.2' name='X-7.1.1.2' style='display:none;'></div><div id='A-7.1.2' name='A-7.1.2' style='display:none;'>See Example
@@ -940,18 +913,15 @@ A:Back
 </div><div id='A-href-8.1.1' name='A-href-8.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-8.1.1' name='A-target-8.1.1' style='display:none;'>target="_blank"</div><div id='X-8.1.1' name='X-8.1.1' style='display:none;'></div><div id='A-8.1.2' name='A-8.1.2' style='display:none;'>Continue
 </div><div id='A-href-8.1.2' name='A-href-8.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.1.2' name='A-target-8.1.2' style='display:none;'></div><div id='X-8.1.2' name='X-8.1.2' style='display:none;'></div><div id='A-8.2' name='A-8.2' style='display:none;'>See Example
 </div><div id='A-href-8.2' name='A-href-8.2' style='display:none;'>javascript:void('');</div><div id='A-target-8.2' name='A-target-8.2' style='display:none;'></div><div id='X-8.2' name='X-8.2' style='display:none;'></div><div id='A-8.2.1' name='A-8.2.1' style='display:none;'>Back
-</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'></div><div id='A-8.3' name='A-8.3' style='display:none;'>Back
-</div><div id='A-href-8.3' name='A-href-8.3' style='display:none;'>javascript:void('');</div><div id='A-target-8.3' name='A-target-8.3' style='display:none;'></div><div id='X-8.3' name='X-8.3' style='display:none;'></div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>maintenance</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'>See Example
+</div><div id='A-href-8.2.1' name='A-href-8.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-8.2.1' name='A-target-8.2.1' style='display:none;'></div><div id='X-8.2.1' name='X-8.2.1' style='display:none;'></div><div id='A-9.1' name='A-9.1' style='display:none;'><variable></div><div id='A-href-9.1' name='A-href-9.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.1' name='A-target-9.1' style='display:none;'></div><div id='X-9.1' name='X-9.1' style='display:none;'>maintenance</div><div id='A-9.1.1' name='A-9.1.1' style='display:none;'>See Example
 </div><div id='A-href-9.1.1' name='A-href-9.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-9.1.1' name='A-target-9.1.1' style='display:none;'>target="_blank"</div><div id='X-9.1.1' name='X-9.1.1' style='display:none;'></div><div id='A-9.1.2' name='A-9.1.2' style='display:none;'>Continue
 </div><div id='A-href-9.1.2' name='A-href-9.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.1.2' name='A-target-9.1.2' style='display:none;'></div><div id='X-9.1.2' name='X-9.1.2' style='display:none;'></div><div id='A-9.2' name='A-9.2' style='display:none;'>See Example
 </div><div id='A-href-9.2' name='A-href-9.2' style='display:none;'>javascript:void('');</div><div id='A-target-9.2' name='A-target-9.2' style='display:none;'></div><div id='X-9.2' name='X-9.2' style='display:none;'></div><div id='A-9.2.1' name='A-9.2.1' style='display:none;'>Back
-</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'></div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'></div><div id='A-9.3' name='A-9.3' style='display:none;'>Back
-</div><div id='A-href-9.3' name='A-href-9.3' style='display:none;'>javascript:void('');</div><div id='A-target-9.3' name='A-target-9.3' style='display:none;'></div><div id='X-9.3' name='X-9.3' style='display:none;'></div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>insurance</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'>See Example
+</div><div id='A-href-9.2.1' name='A-href-9.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-9.2.1' name='A-target-9.2.1' style='display:none;'></div><div id='X-9.2.1' name='X-9.2.1' style='display:none;'></div><div id='A-10.1' name='A-10.1' style='display:none;'><variable></div><div id='A-href-10.1' name='A-href-10.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.1' name='A-target-10.1' style='display:none;'></div><div id='X-10.1' name='X-10.1' style='display:none;'>insurance</div><div id='A-10.1.1' name='A-10.1.1' style='display:none;'>See Example
 </div><div id='A-href-10.1.1' name='A-href-10.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/06-deduction.png</div><div id='A-target-10.1.1' name='A-target-10.1.1' style='display:none;'>target="_blank"</div><div id='X-10.1.1' name='X-10.1.1' style='display:none;'></div><div id='A-10.1.2' name='A-10.1.2' style='display:none;'>Continue
 </div><div id='A-href-10.1.2' name='A-href-10.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.1.2' name='A-target-10.1.2' style='display:none;'></div><div id='X-10.1.2' name='X-10.1.2' style='display:none;'></div><div id='A-10.2' name='A-10.2' style='display:none;'> See Example
 </div><div id='A-href-10.2' name='A-href-10.2' style='display:none;'>javascript:void('');</div><div id='A-target-10.2' name='A-target-10.2' style='display:none;'></div><div id='X-10.2' name='X-10.2' style='display:none;'></div><div id='A-10.2.1' name='A-10.2.1' style='display:none;'>Back
-</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'></div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'></div><div id='A-10.3' name='A-10.3' style='display:none;'>Back
-</div><div id='A-href-10.3' name='A-href-10.3' style='display:none;'>javascript:void('');</div><div id='A-target-10.3' name='A-target-10.3' style='display:none;'></div><div id='X-10.3' name='X-10.3' style='display:none;'></div><div id='A-11.1' name='A-11.1' style='display:none;'>Next
+</div><div id='A-href-10.2.1' name='A-href-10.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-10.2.1' name='A-target-10.2.1' style='display:none;'></div><div id='X-10.2.1' name='X-10.2.1' style='display:none;'></div><div id='A-11.1' name='A-11.1' style='display:none;'>Next
 </div><div id='A-href-11.1' name='A-href-11.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1' name='A-target-11.1' style='display:none;'></div><div id='X-11.1' name='X-11.1' style='display:none;'></div><div id='A-11.1.1' name='A-11.1.1' style='display:none;'>Next	
 </div><div id='A-href-11.1.1' name='A-href-11.1.1' style='display:none;'>javascript:void('');</div><div id='A-target-11.1.1' name='A-target-11.1.1' style='display:none;'></div><div id='X-11.1.1' name='X-11.1.1' style='display:none;'></div><div id='A-11.1.2' name='A-11.1.2' style='display:none;'>I don't have any more expenses, please take me to my summary.
 
@@ -964,31 +934,25 @@ A:Back
 </div><div id='A-href-13.1.1' name='A-href-13.1.1' style='display:none;'>http://i0.wp.com/hurdlr.com/wp-content/uploads/2015/03/10-deduction.png</div><div id='A-target-13.1.1' name='A-target-13.1.1' style='display:none;'>target="_blank"</div><div id='X-13.1.1' name='X-13.1.1' style='display:none;'></div><div id='A-13.1.2' name='A-13.1.2' style='display:none;'>Continue
 </div><div id='A-href-13.1.2' name='A-href-13.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.1.2' name='A-target-13.1.2' style='display:none;'></div><div id='X-13.1.2' name='X-13.1.2' style='display:none;'></div><div id='A-13.2' name='A-13.2' style='display:none;'>See Example
 </div><div id='A-href-13.2' name='A-href-13.2' style='display:none;'>javascript:void('');</div><div id='A-target-13.2' name='A-target-13.2' style='display:none;'></div><div id='X-13.2' name='X-13.2' style='display:none;'></div><div id='A-13.2.1' name='A-13.2.1' style='display:none;'>Back
-</div><div id='A-href-13.2.1' name='A-href-13.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.2.1' name='A-target-13.2.1' style='display:none;'></div><div id='X-13.2.1' name='X-13.2.1' style='display:none;'></div><div id='A-13.3' name='A-13.3' style='display:none;'>Back
-</div><div id='A-href-13.3' name='A-href-13.3' style='display:none;'>javascript:void('');</div><div id='A-target-13.3' name='A-target-13.3' style='display:none;'></div><div id='X-13.3' name='X-13.3' style='display:none;'></div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>food</div><div id='A-14.1.1' name='A-14.1.1' style='display:none;'>See Example
+</div><div id='A-href-13.2.1' name='A-href-13.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-13.2.1' name='A-target-13.2.1' style='display:none;'></div><div id='X-13.2.1' name='X-13.2.1' style='display:none;'></div><div id='A-14.1' name='A-14.1' style='display:none;'><variable></div><div id='A-href-14.1' name='A-href-14.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.1' name='A-target-14.1' style='display:none;'></div><div id='X-14.1' name='X-14.1' style='display:none;'>food</div><div id='A-14.1.1' name='A-14.1.1' style='display:none;'>See Example
 </div><div id='A-href-14.1.1' name='A-href-14.1.1' style='display:none;'>http://i2.wp.com/hurdlr.com/wp-content/uploads/2015/03/11-deduction.png</div><div id='A-target-14.1.1' name='A-target-14.1.1' style='display:none;'>target="_blank"</div><div id='X-14.1.1' name='X-14.1.1' style='display:none;'></div><div id='A-14.1.2' name='A-14.1.2' style='display:none;'>Continue
 </div><div id='A-href-14.1.2' name='A-href-14.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.1.2' name='A-target-14.1.2' style='display:none;'></div><div id='X-14.1.2' name='X-14.1.2' style='display:none;'></div><div id='A-14.2' name='A-14.2' style='display:none;'>See Example
 </div><div id='A-href-14.2' name='A-href-14.2' style='display:none;'>javascript:void('');</div><div id='A-target-14.2' name='A-target-14.2' style='display:none;'></div><div id='X-14.2' name='X-14.2' style='display:none;'></div><div id='A-14.2.1' name='A-14.2.1' style='display:none;'>Back
-</div><div id='A-href-14.2.1' name='A-href-14.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.2.1' name='A-target-14.2.1' style='display:none;'></div><div id='X-14.2.1' name='X-14.2.1' style='display:none;'></div><div id='A-14.3' name='A-14.3' style='display:none;'>Back
-</div><div id='A-href-14.3' name='A-href-14.3' style='display:none;'>javascript:void('');</div><div id='A-target-14.3' name='A-target-14.3' style='display:none;'></div><div id='X-14.3' name='X-14.3' style='display:none;'></div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>carwash</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'>See Example
+</div><div id='A-href-14.2.1' name='A-href-14.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-14.2.1' name='A-target-14.2.1' style='display:none;'></div><div id='X-14.2.1' name='X-14.2.1' style='display:none;'></div><div id='A-15.1' name='A-15.1' style='display:none;'><variable></div><div id='A-href-15.1' name='A-href-15.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.1' name='A-target-15.1' style='display:none;'></div><div id='X-15.1' name='X-15.1' style='display:none;'>carwash</div><div id='A-15.1.1' name='A-15.1.1' style='display:none;'>See Example
 </div><div id='A-href-15.1.1' name='A-href-15.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-15.1.1' name='A-target-15.1.1' style='display:none;'>target="_blank"</div><div id='X-15.1.1' name='X-15.1.1' style='display:none;'></div><div id='A-15.1.2' name='A-15.1.2' style='display:none;'>Continue
 </div><div id='A-href-15.1.2' name='A-href-15.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.1.2' name='A-target-15.1.2' style='display:none;'></div><div id='X-15.1.2' name='X-15.1.2' style='display:none;'></div><div id='A-15.2' name='A-15.2' style='display:none;'>See Example
 </div><div id='A-href-15.2' name='A-href-15.2' style='display:none;'>javascript:void('');</div><div id='A-target-15.2' name='A-target-15.2' style='display:none;'></div><div id='X-15.2' name='X-15.2' style='display:none;'></div><div id='A-15.2.1' name='A-15.2.1' style='display:none;'>Back
-</div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'></div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'></div><div id='A-15.3' name='A-15.3' style='display:none;'>Back
-</div><div id='A-href-15.3' name='A-href-15.3' style='display:none;'>javascript:void('');</div><div id='A-target-15.3' name='A-target-15.3' style='display:none;'></div><div id='X-15.3' name='X-15.3' style='display:none;'></div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>aaa</div><div id='A-16.1.1' name='A-16.1.1' style='display:none;'>See Example
+</div><div id='A-href-15.2.1' name='A-href-15.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-15.2.1' name='A-target-15.2.1' style='display:none;'></div><div id='X-15.2.1' name='X-15.2.1' style='display:none;'></div><div id='A-16.1' name='A-16.1' style='display:none;'><variable></div><div id='A-href-16.1' name='A-href-16.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.1' name='A-target-16.1' style='display:none;'></div><div id='X-16.1' name='X-16.1' style='display:none;'>aaa</div><div id='A-16.1.1' name='A-16.1.1' style='display:none;'>See Example
 </div><div id='A-href-16.1.1' name='A-href-16.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-16.1.1' name='A-target-16.1.1' style='display:none;'>target="_blank"</div><div id='X-16.1.1' name='X-16.1.1' style='display:none;'></div><div id='A-16.1.2' name='A-16.1.2' style='display:none;'>Continue
 </div><div id='A-href-16.1.2' name='A-href-16.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.1.2' name='A-target-16.1.2' style='display:none;'></div><div id='X-16.1.2' name='X-16.1.2' style='display:none;'></div><div id='A-16.2' name='A-16.2' style='display:none;'>See Example
 </div><div id='A-href-16.2' name='A-href-16.2' style='display:none;'>javascript:void('');</div><div id='A-target-16.2' name='A-target-16.2' style='display:none;'></div><div id='X-16.2' name='X-16.2' style='display:none;'></div><div id='A-16.2.1' name='A-16.2.1' style='display:none;'>Back
-</div><div id='A-href-16.2.1' name='A-href-16.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.2.1' name='A-target-16.2.1' style='display:none;'></div><div id='X-16.2.1' name='X-16.2.1' style='display:none;'></div><div id='A-16.3' name='A-16.3' style='display:none;'>Back
-</div><div id='A-href-16.3' name='A-href-16.3' style='display:none;'>javascript:void('');</div><div id='A-target-16.3' name='A-target-16.3' style='display:none;'></div><div id='X-16.3' name='X-16.3' style='display:none;'></div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>fees</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'>See Example
+</div><div id='A-href-16.2.1' name='A-href-16.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-16.2.1' name='A-target-16.2.1' style='display:none;'></div><div id='X-16.2.1' name='X-16.2.1' style='display:none;'></div><div id='A-17.1' name='A-17.1' style='display:none;'><variable></div><div id='A-href-17.1' name='A-href-17.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.1' name='A-target-17.1' style='display:none;'></div><div id='X-17.1' name='X-17.1' style='display:none;'>fees</div><div id='A-17.1.1' name='A-17.1.1' style='display:none;'>See Example
 </div><div id='A-href-17.1.1' name='A-href-17.1.1' style='display:none;'>http://i1.wp.com/hurdlr.com/wp-content/uploads/2015/03/12-deduction.png</div><div id='A-target-17.1.1' name='A-target-17.1.1' style='display:none;'>target="_blank"</div><div id='X-17.1.1' name='X-17.1.1' style='display:none;'></div><div id='A-17.1.2' name='A-17.1.2' style='display:none;'>Continue
 </div><div id='A-href-17.1.2' name='A-href-17.1.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.1.2' name='A-target-17.1.2' style='display:none;'></div><div id='X-17.1.2' name='X-17.1.2' style='display:none;'></div><div id='A-17.2' name='A-17.2' style='display:none;'>See Example
 </div><div id='A-href-17.2' name='A-href-17.2' style='display:none;'>javascript:void('');</div><div id='A-target-17.2' name='A-target-17.2' style='display:none;'></div><div id='X-17.2' name='X-17.2' style='display:none;'></div><div id='A-17.2.1' name='A-17.2.1' style='display:none;'>Back
-</div><div id='A-href-17.2.1' name='A-href-17.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.2.1' name='A-target-17.2.1' style='display:none;'></div><div id='X-17.2.1' name='X-17.2.1' style='display:none;'></div><div id='A-17.3' name='A-17.3' style='display:none;'>Back
-</div><div id='A-href-17.3' name='A-href-17.3' style='display:none;'>javascript:void('');</div><div id='A-target-17.3' name='A-target-17.3' style='display:none;'></div><div id='X-17.3' name='X-17.3' style='display:none;'></div><div id='A-18.1' name='A-18.1' style='display:none;'>Yes
+</div><div id='A-href-17.2.1' name='A-href-17.2.1' style='display:none;'>javascript:void('');</div><div id='A-target-17.2.1' name='A-target-17.2.1' style='display:none;'></div><div id='X-17.2.1' name='X-17.2.1' style='display:none;'></div><div id='A-18.1' name='A-18.1' style='display:none;'>Yes
 </div><div id='A-href-18.1' name='A-href-18.1' style='display:none;'>javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')</div><div id='A-target-18.1' name='A-target-18.1' style='display:none;'></div><div id='X-18.1' name='X-18.1' style='display:none;'></div><div id='A-18.2' name='A-18.2' style='display:none;'>No, I made this all up.
-</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'></div><div id='A-18.3' name='A-18.3' style='display:none;'>Back
-</div><div id='A-href-18.3' name='A-href-18.3' style='display:none;'>javascript:void('');</div><div id='A-target-18.3' name='A-target-18.3' style='display:none;'></div><div id='X-18.3' name='X-18.3' style='display:none;'></div></textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b> The Uber Driver Tax Prepper: Knowing your Deductions</b></p><p>By Edward S Roach</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
+</div><div id='A-href-18.2' name='A-href-18.2' style='display:none;'>javascript:void('');</div><div id='A-target-18.2' name='A-target-18.2' style='display:none;'></div><div id='X-18.2' name='X-18.2' style='display:none;'></div></textarea><textarea id="transcript" name="transcript" style="display:none;" disabled="disabled"></textarea><div style="float:left;width:100%;margin:15px 0 0px 0;border-top: solid 1px #ddd;"><div id=credits class=credits style="display:none;"><div class=credit_text><p><b> The Uber Driver Tax Prepper: Knowing your Deductions</b></p><p>By Edward S Roach</p></div></div><p align=center><a href="javascript:void('');" onClick="shoh('credits');">credits</a> | <a href="http://www.qnamarkup.org/" target=_top>code your own</a></p></div></FORM></div></div>
 <script type="text/javascript">
 	var QNum = 0;
 	var Qhtml = "";
