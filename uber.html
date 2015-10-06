@@ -54,16 +54,16 @@
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
-		color:#0062f5;
+		line-height: 20px;
+		color:#00a2ff;
 		min-width:30px;
 		background:#000000;
 		border-radius: 15px;
-		padding:15px 22.5px 21px 22.5px;
+		padding:10px 15px 14px 15px;
 		margin-right:45px;
 	}
 
-	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#ffe600; } 
+	div.question_text a:link, div.question_text a:hover, div.question_text a:active, div.question_text a:visited{ color:#e3fbfc; } 
 
 	div.question_arrow{
 		float:left; 
@@ -78,12 +78,12 @@
 		float:right;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
+		line-height: 20px;
 		color:#000000;
 		min-width:30px;
-		background:#5ee4ff;
+		background:#00a2ff;
 		border-radius: 15px;
-		padding:15px 22.5px 21px 22.5px;
+		padding:10px 15px 14px 15px;
 		margin-left:45px;
 	}
 	div.ans_arrow{
@@ -92,7 +92,7 @@
 		height: 0; 
 		border-left: 10px solid transparent; 
 		border-right: 5px solid transparent; 
-		border-top: 15px solid #5ee4ff;
+		border-top: 15px solid #00a2ff;
 		margin:0 20px;
 	}
 	div.choices{
@@ -122,18 +122,18 @@
 
 	.qpad {
 		float:left;
-		padding:0 22.5px;
+		padding:0 15px;
 	}
 
 	a.qabutton {
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
+		line-height: 20px;
 		width:100%;
 		background: #eee;
 		border-radius: 8px;
-		padding:15px 0px 18px 0;
+		padding:10px 0px 12px 0;
 		margin: 0 0 8px 0;
 		border: solid 1px #888;
 		text-align:left;
@@ -145,11 +145,11 @@
 		float:left;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
+		line-height: 20px;
 		width:100%;
 		background: #ddd;
 		border-radius: 8px;
-		padding:15px 0px 18px 0;
+		padding:10px 0px 12px 0;
 		margin: 0 0 8px 0;
 		border: solid 1px #888;
 		text-align:left;
@@ -175,11 +175,11 @@
 		width:100%;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
+		line-height: 20px;
 		background: #fff;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
-		padding:15px 15px 18px 15px;
+		padding:10px 10px 12px 10px;
 		border: solid 0px #888;
 		border-bottom: solid 1px #888;
 		text-align:left;
@@ -193,10 +193,10 @@
 		text-align:left;
 		font-family: Verdana, Geneva, sans-serif;
 		font-size: 20px;
-		line-height: 30px;
+		line-height: 20px;
 		background: #eee;
 		border-radius: 8px;
-		padding:15px 0px 18px 0px;
+		padding:10px 0px 12px 0px;
 		color: #000000;
 		text-decoration: none;
 	}
@@ -234,7 +234,7 @@ A: No I don't like money
 A: Back
 	Q(2.3):GOTO:1
 
-Q(3): Ok so first off you will need a Schedule C (Form 1040) form to follow along, do you have one?
+Q(3): Ok so first off you will need a Schedule C Form 1040 to follow along, do you have one?
 A: Yes
 	Q(3.1):GOTO:4
 A:[http://www.irs.gov/pub/irs-pdf/f1040sc.pdf] Click Here for Schedule C Form
@@ -251,7 +251,7 @@ A: Back
 Q(5):The Standard Mileage Method is the easiest deduction method, but may not give you the best return.&lt;br&gt;&lt;br&gt; The current mileage rate for 2015 is 57.5 cents/mile. Add up all your miles and enter it below:
 X:mileage
 	DOC(5.1): STANDARD MILEAGE METHOD &lt;br&gt;&lt;br&gt; If you choose this method enter your total mileage of &lt;x&gt;mileage&lt;/x&gt; miles on "line 44a" of the Schedule C Form 1040.&lt;br&gt;&lt;br&gt;
-	Q(5.1):Your total mileage of &lt;x&gt;mileage&lt;/x&gt; miles will go on "Line 44a of the Schedule C Form." &lt;x&gt;mileage&lt;/x&gt; multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income.
+	Q(5.1):Your total mileage of &lt;x&gt;mileage&lt;/x&gt; miles will go on "Line 44a of the Schedule C Form." &lt;x&gt;mileage&lt;/x&gt; multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income. Compare that amount to The Actual Expenses Method for your best option.
 	A:[https://cdn-images-1.medium.com/max/800/0*mBrlc0xgqjN9vJxY.png]Line 44 Example
 		Q(5.1.1):Would you like to Proceed to the Actual Expenses Method?
 		A: Yes
@@ -285,7 +285,7 @@ A[javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')]:N
 A:Back
 	Q(6.3):GOTO:4
 
-Q(7):Ok great, let's go through the possible deductions.&lt;br&gt;&lt;br&gt;Do you own or lease your vehicle that you use for Uber?
+Q(7):Ok great, let's go through the possible deductions.&lt;br&gt;&lt;br&gt;&lt;img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png"&gt;Do you own or lease the vehicle that you use for Uber?
 A: Own
 	Q(7.1):Interest Deduction.&lt;br&gt;&lt;br&gt;Since your vehicle is a crucial part of driving for Uber, you can deduct that part of the interest expense that represents your business use of the car. Enter that amount below:
 	X:interest
@@ -321,7 +321,7 @@ A: Lease
 A:Back
 	Q(7.3):GOTO:6
 
-Q(8): Gas/Fuel Costs.&lt;br&gt;&lt;br&gt;You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.&lt;br&gt;&lt;br&gt;Enter your total gas costs below:
+Q(8): &lt;img src="http://williessupervalu.com/files/williessupervalu/9313/0228/9490/willies_supervalu_pump_perks_logo.png"&gt;Gas/Fuel Costs.&lt;br&gt;&lt;br&gt;You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.&lt;br&gt;&lt;br&gt;Enter your total gas costs below:
 X:gas
 	DOC(8.1): Gas Costs - Your total of $&lt;x&gt;gas&lt;/x&gt; will go on "line 9" of the Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(8.1):Your gas costs totaling $&lt;x&gt;gas&lt;/x&gt; will go on "line 9" of the Schedule C form 1040
@@ -330,13 +330,13 @@ X:gas
 	A:Continue
 		Q(8.1.2):GOTO:9
 A:See Example
-	Q(8.2):Donny uses his car 60% of the time for driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
+	Q(8.2):Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 	A:Back
 		Q(8.2.1):GOTO:8
 A:Back
 	Q(8.3):GOTO:7
 
-Q(9): Maintenance Costs.&lt;br&gt;&lt;br&gt;Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.&lt;br&gt;&lt;br&gt;Enter your Maintenance Costs below, if none, type "0":
+Q(9): &lt;img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg"&gt;Maintenance Costs.&lt;br&gt;&lt;br&gt;Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.&lt;br&gt;&lt;br&gt;Enter your Maintenance Costs below, if none, type "0":
 X:maintenance
 	DOC(9.1):Auto Maintenance Expenses - Your costs totaling $&lt;x&gt;maintenance&lt;/x&gt; in expenses will go on "line 9" of the Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(9.1): Your Maintenance Costs totaling $&lt;x&gt;maintenance&lt;/x&gt; will go on "line 9" of the Schedule C form 1040.
@@ -345,13 +345,13 @@ X:maintenance
 	A:Continue
 		Q(9.1.2):GOTO:10
 A:See Example
-	Q(9.2):In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time for driving for Uber, he can deduct $150 off of the total cost to replace the tires.
+	Q(9.2):In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 	A:Back
 		Q(9.2.1):GOTO:9
 A:Back
 	Q(9.3):GOTO:8
 
-Q(10):Car Insurance.&lt;br&gt;&lt;br&gt;Car insurance is just another critical cost of driving for Uber, I hope you are not driving without it! Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.&lt;br&gt;&lt;br&gt;Enter your car insurance costs below:
+Q(10):&lt;img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg"&gt;Car Insurance.&lt;br&gt;&lt;br&gt;Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.&lt;br&gt;&lt;br&gt;Enter your car insurance costs below:
 X:insurance
 	DOC(10.1): Car Insurance Costs - Your insurance costs totaling $&lt;x&gt;insurance&lt;/x&gt; will go on "line 9" of the Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(10.1): Your Insurance costs totaling $&lt;x&gt;insurance&lt;/x&gt; will go on "line 9" of the Schedule C form 1040.
@@ -366,7 +366,7 @@ A: See Example
 A:Back
 	Q(10.3):GOTO:9
 
-Q(11):In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to your driving business can be deducted when it comes time to file your taxes.&lt;br&gt;&lt;br&gt;You can deduct a number of operating expenses when it comes to tax time as long as they are considered "ordinary and necessary".
+Q(11):In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.&lt;br&gt;&lt;br&gt;You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 A:Next
 	Q(11.1):The IRS defines "ordinary and necessary" as the following: "An ordinary expense is one that is common and accepted in your industry. A necessary expense is one that is helpful and appropriate for your trade or business. An expense does not have to be indispensable to be considered necessary." &lt;br&gt;&lt;br&gt;This may sound complicated, but I'll break the common individual deductions down for you now, so you do not have to untangle the terminology on your own.
 	A:Next	
@@ -374,9 +374,9 @@ A:Next
 		Q(11.1.1):GOTO:12
 	A[javascript:submit2('http://www.qnamarkup.org/doc/parse/html/', 'POST', 't')]:I don't have any more expenses, please take me to my summary.
 
-Q(12):Mobile Phone.&lt;br&gt;&lt;br&gt;As an Uber driver, your mobile phone is the control center of your business.That new smartphone you have purchased for work, it is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.&lt;br&gt;&lt;br&gt;Enter costs below:
+Q(12):&lt;img src="https://media3.giphy.com/media/12kn6hR2uOvf1u/200.gif"&gt;Mobile Phone&lt;br&gt;&lt;br&gt;As an Uber driver, your mobile phone is the control center of your business.That means that new smartphone you've purchased for work is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.&lt;br&gt;&lt;br&gt;Enter costs below:
 X:phone
-	DOC(12.1): Mobile Phone Costs:&lt;br&gt;&lt;br&gt;Device Expenses - your device expenses totaling $&lt;x&gt;phone&lt;/x&gt; will go on "line 22" of the Schedule C form 1040.&lt;br&gt;&lt;br&gt;
+	DOC(12.1):Mobile Device Expenses - your device expenses totaling $&lt;x&gt;phone&lt;/x&gt; will go on "line 22" of the Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(12.1):Your mobile phone costs totaling $&lt;x&gt;phone&lt;/x&gt; will go on "line 22" of the Schedule C form 1040.
 	A:[http://i2.wp.com/hurdlr.com/wp-content/uploads/2015/03/09-deduction.png]See Example
 		Q(12.1.1):GOTO:13
@@ -389,7 +389,7 @@ A:See Example
 A:Back
 	Q(12.3):GOTO:11
 
-Q(13):Wireless Phone Plan.&lt;br&gt;&lt;br&gt;In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.&lt;br&gt;&lt;br&gt;Enter your wireless plan costs below:
+Q(13):&lt;img src="http://citizensutilityboard.org/images/CellPhoneBill.jpg"&gt;Wireless Phone Plan.&lt;br&gt;&lt;br&gt;In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.&lt;br&gt;&lt;br&gt;Enter your wireless plan costs below:
 X:wireless
 	DOC(13.1): Wireless Phone Plan - Your wireless plan costs totaling $&lt;x&gt;wireless&lt;/x&gt; will go on "line 25" of Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(13.1): Your wireless plan costs totaling $&lt;x&gt;wireless&lt;/x&gt; will go on "line 25" of Schedule C form 1040.
@@ -404,7 +404,7 @@ A:See Example
 A:Back
 	Q(13.3):GOTO:12
 
-Q(14):Food & Drink for Customers.&lt;br&gt;&lt;br&gt;The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
+Q(14):&lt;img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif"&gt;Food & Drink for Customers.&lt;br&gt;&lt;br&gt;The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
 X:food
 	DOC(14.1): Food & Drink Expenses - Your total costs for food and drinks for customers of $&lt;x&gt;food&lt;/x&gt; will go on "line 24b" of Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(14.1): Your Food & Drink costs totaling $&lt;x&gt;food&lt;/x&gt; will go on "line 24b" of Schedule C form 1040.
@@ -419,7 +419,7 @@ A:See Example
 A:Back
 	Q(14.3):GOTO:13
 
-Q(15): Car Washes.&lt;br&gt;&lt;br&gt;As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
+Q(15): &lt;img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif"&gt;Car Washes.&lt;br&gt;&lt;br&gt;As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.&lt;br&gt;&lt;br&gt;Find those receipts and enter those costs below:
 X:carwash
 	DOC(15.1):Car Wash Expenses - Your Car Wash costs totaling $&lt;x&gt;carwash&lt;/x&gt; will go on "line 9" of Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(15.1): Your Car Wash costs totaling $&lt;x&gt;carwash&lt;/x&gt; will go on "line 9" of Schedule C form 1040.
@@ -434,7 +434,7 @@ A:See Example
 A:Back
 	Q(15.3):GOTO:14
 
-Q(16):AAA Membership/Roadside Assistence.&lt;br&gt;&lt;br&gt;If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.&lt;br&gt;&lt;br&gt;Enter those costs below:
+Q(16):&lt;img src="http://www.moreenergy.tv/aaa_sign_full.jpg"&gt;AAA Membership/Roadside Assistence.&lt;br&gt;&lt;br&gt;If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.&lt;br&gt;&lt;br&gt;Enter those costs below:
 X:aaa
 	DOC(16.1):AAA Membership/Roadside Assistance Programs - Your membership costs totaling $&lt;x&gt;aaa&lt;/x&gt; will go on "line 9" of Schedule C form 1040.&lt;br&gt;&lt;br&gt;
 	Q(16.1): Your membership costs totaling $&lt;x&gt;aaa&lt;/x&gt; will also go on "line 9" of Schedule C form 1040.
@@ -449,7 +449,7 @@ A:See Example
 A:Back
 	Q(16.3):GOTO:15
 
-Q(17):Parking Fees & Tolls.&lt;br&gt;&lt;br&gt; Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.&lt;br&gt;&lt;br&gt;Enter those total costs below:
+Q(17):&lt;img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg"&gt;Parking Fees & Tolls.&lt;br&gt;&lt;br&gt; Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.&lt;br&gt;&lt;br&gt;Enter those total costs below:
 X:fees
 	DOC(17.1): Parking Fees & Tolls - Your total fees in the amount of $&lt;x&gt;fees&lt;/x&gt; will go on "line 9" of Schedule C form 1040.&lt;br&gt;&lt;br&gt;*Please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. It is advised that you consult an Accounting Service if you feel you may have a deduction not listed here.&lt;br&gt;&lt;br&gt;Thank You for using The Uber Driver Tax Prepper: Knowing your Deductions!
 	Q(17.1): Your Parking fees and Toll costs totaling $&lt;x&gt;fees&lt;/x&gt; will also go on "line 9" of Schedule C form 1040.
@@ -492,7 +492,7 @@ A:Back
 </div><div id='Q-2.2' name='Q-2.2' style='display:none;'> that's Ok, come back when the bills pile up, you might have a change of heart!
 </div><div id='Q-2.3' name='Q-2.3' style='display:none;'>GOTO:1
 
-</div><div id='Q-3' name='Q-3' style='display:none;'> Ok so first off you will need a Schedule C (Form 1040) form to follow along, do you have one?
+</div><div id='Q-3' name='Q-3' style='display:none;'> Ok so first off you will need a Schedule C Form 1040 to follow along, do you have one?
 </div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4
 </div><div id='Q-3.2' name='Q-3.2' style='display:none;'>GOTO:4
 </div><div id='Q-3.3' name='Q-3.3' style='display:none;'>GOTO:2	
@@ -503,7 +503,7 @@ A:Back
 
 </div><div id='Q-5' name='Q-5' style='display:none;'>The Standard Mileage Method is the easiest deduction method, but may not give you the best return.<br><br> The current mileage rate for 2015 is 57.5 cents/mile. Add up all your miles and enter it below:
 </div><div id='D-5.1' name='D-5.1' style='display:none;'> STANDARD MILEAGE METHOD <br><br> If you choose this method enter your total mileage of <x>mileage</x> miles on "line 44a" of the Schedule C Form 1040.<br><br>
-</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>Your total mileage of <x>mileage</x> miles will go on "Line 44a of the Schedule C Form." <x>mileage</x> multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income.
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>Your total mileage of <x>mileage</x> miles will go on "Line 44a of the Schedule C Form." <x>mileage</x> multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income. Compare that amount to The Actual Expenses Method for your best option.
 </div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>Would you like to Proceed to the Actual Expenses Method?
 </div><div id='Q-5.1.1.1' name='Q-5.1.1.1' style='display:none;'>GOTO:6
 </div><div id='Q-5.1.1.2' name='Q-5.1.1.2' style='display:none;'>GOTO:11
@@ -521,7 +521,7 @@ A:Back
 </div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7
 </div><div id='Q-6.3' name='Q-6.3' style='display:none;'>GOTO:4
 
-</div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br>Do you own or lease your vehicle that you use for Uber?
+</div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br><img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png">Do you own or lease the vehicle that you use for Uber?
 </div><div id='Q-7.1' name='Q-7.1' style='display:none;'>Interest Deduction.<br><br>Since your vehicle is a crucial part of driving for Uber, you can deduct that part of the interest expense that represents your business use of the car. Enter that amount below:
 </div><div id='D-7.1.1' name='D-7.1.1' style='display:none;'> Interest Deduction - Your Auto Loan Interest of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.<br><br>
 </div><div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'>Your interest expense of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.
@@ -542,25 +542,25 @@ A:Back
 </div><div id='Q-7.2.3' name='Q-7.2.3' style='display:none;'>GOTO:7
 </div><div id='Q-7.3' name='Q-7.3' style='display:none;'>GOTO:6
 
-</div><div id='Q-8' name='Q-8' style='display:none;'> Gas/Fuel Costs.<br><br>You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.<br><br>Enter your total gas costs below:
+</div><div id='Q-8' name='Q-8' style='display:none;'> <img src="http://williessupervalu.com/files/williessupervalu/9313/0228/9490/willies_supervalu_pump_perks_logo.png">Gas/Fuel Costs.<br><br>You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.<br><br>Enter your total gas costs below:
 </div><div id='D-8.1' name='D-8.1' style='display:none;'> Gas Costs - Your total of $<x>gas</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-8.1' name='Q-8.1' style='display:none;'>Your gas costs totaling $<x>gas</x> will go on "line 9" of the Schedule C form 1040
 </div><div id='Q-8.1.1' name='Q-8.1.1' style='display:none;'>GOTO:9
 </div><div id='Q-8.1.2' name='Q-8.1.2' style='display:none;'>GOTO:9
-</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time for driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
+</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 </div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:8
 </div><div id='Q-8.3' name='Q-8.3' style='display:none;'>GOTO:7
 
-</div><div id='Q-9' name='Q-9' style='display:none;'> Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
+</div><div id='Q-9' name='Q-9' style='display:none;'> <img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg">Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
 </div><div id='D-9.1' name='D-9.1' style='display:none;'>Auto Maintenance Expenses - Your costs totaling $<x>maintenance</x> in expenses will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Your Maintenance Costs totaling $<x>maintenance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'>GOTO:10
 </div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'>GOTO:10
-</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time for driving for Uber, he can deduct $150 off of the total cost to replace the tires.
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 </div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:9
 </div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:8
 
-</div><div id='Q-10' name='Q-10' style='display:none;'>Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber, I hope you are not driving without it! Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
+</div><div id='Q-10' name='Q-10' style='display:none;'><img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg">Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
 </div><div id='D-10.1' name='D-10.1' style='display:none;'> Car Insurance Costs - Your insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Your Insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'>GOTO:11
@@ -569,12 +569,12 @@ A:Back
 </div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:9
 </div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:9
 
-</div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to your driving business can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses when it comes to tax time as long as they are considered "ordinary and necessary".
+</div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 </div><div id='Q-11.1' name='Q-11.1' style='display:none;'>The IRS defines "ordinary and necessary" as the following: "An ordinary expense is one that is common and accepted in your industry. A necessary expense is one that is helpful and appropriate for your trade or business. An expense does not have to be indispensable to be considered necessary." <br><br>This may sound complicated, but I'll break the common individual deductions down for you now, so you do not have to untangle the terminology on your own.
 </div><div id='D-11.1.1' name='D-11.1.1' style='display:none;'>COMMON OPERATING EXPENSES<br><br> The following deductions may be made in addition to your choice of the Standard Mileage or Actual Expenses Deduction:<br><br>
 </div><div id='Q-11.1.1' name='Q-11.1.1' style='display:none;'>GOTO:12
-</div><div id='Q-12' name='Q-12' style='display:none;'>Mobile Phone.<br><br>As an Uber driver, your mobile phone is the control center of your business.That new smartphone you have purchased for work, it is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.<br><br>Enter costs below:
-</div><div id='D-12.1' name='D-12.1' style='display:none;'> Mobile Phone Costs:<br><br>Device Expenses - your device expenses totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.<br><br>
+</div><div id='Q-12' name='Q-12' style='display:none;'><img src="https://media3.giphy.com/media/12kn6hR2uOvf1u/200.gif">Mobile Phone<br><br>As an Uber driver, your mobile phone is the control center of your business.That means that new smartphone you've purchased for work is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.<br><br>Enter costs below:
+</div><div id='D-12.1' name='D-12.1' style='display:none;'>Mobile Device Expenses - your device expenses totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.<br><br>
 </div><div id='Q-12.1' name='Q-12.1' style='display:none;'>Your mobile phone costs totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.
 </div><div id='Q-12.1.1' name='Q-12.1.1' style='display:none;'>GOTO:13
 </div><div id='Q-12.1.2' name='Q-12.1.2' style='display:none;'>GOTO:13
@@ -582,7 +582,7 @@ A:Back
 </div><div id='Q-12.2.1' name='Q-12.2.1' style='display:none;'>GOTO:12
 </div><div id='Q-12.3' name='Q-12.3' style='display:none;'>GOTO:11
 
-</div><div id='Q-13' name='Q-13' style='display:none;'>Wireless Phone Plan.<br><br>In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.<br><br>Enter your wireless plan costs below:
+</div><div id='Q-13' name='Q-13' style='display:none;'><img src="http://citizensutilityboard.org/images/CellPhoneBill.jpg">Wireless Phone Plan.<br><br>In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.<br><br>Enter your wireless plan costs below:
 </div><div id='D-13.1' name='D-13.1' style='display:none;'> Wireless Phone Plan - Your wireless plan costs totaling $<x>wireless</x> will go on "line 25" of Schedule C form 1040.<br><br>
 </div><div id='Q-13.1' name='Q-13.1' style='display:none;'> Your wireless plan costs totaling $<x>wireless</x> will go on "line 25" of Schedule C form 1040.
 </div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'>GOTO:14
@@ -591,7 +591,7 @@ A:Back
 </div><div id='Q-13.2.1' name='Q-13.2.1' style='display:none;'>GOTO:13
 </div><div id='Q-13.3' name='Q-13.3' style='display:none;'>GOTO:12
 
-</div><div id='Q-14' name='Q-14' style='display:none;'>Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
+</div><div id='Q-14' name='Q-14' style='display:none;'><img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif">Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-14.1' name='D-14.1' style='display:none;'> Food & Drink Expenses - Your total costs for food and drinks for customers of $<x>food</x> will go on "line 24b" of Schedule C form 1040.<br><br>
 </div><div id='Q-14.1' name='Q-14.1' style='display:none;'> Your Food & Drink costs totaling $<x>food</x> will go on "line 24b" of Schedule C form 1040.
 </div><div id='Q-14.1.1' name='Q-14.1.1' style='display:none;'>GOTO:15
@@ -600,7 +600,7 @@ A:Back
 </div><div id='Q-14.2.1' name='Q-14.2.1' style='display:none;'>GOTO:14
 </div><div id='Q-14.3' name='Q-14.3' style='display:none;'>GOTO:13
 
-</div><div id='Q-15' name='Q-15' style='display:none;'> Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
+</div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif">Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-15.1' name='D-15.1' style='display:none;'>Car Wash Expenses - Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.<br><br>
 </div><div id='Q-15.1' name='Q-15.1' style='display:none;'> Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.
 </div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'>GOTO:16
@@ -609,7 +609,7 @@ A:Back
 </div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'>GOTO:15
 </div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:14
 
-</div><div id='Q-16' name='Q-16' style='display:none;'>AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
+</div><div id='Q-16' name='Q-16' style='display:none;'><img src="http://www.moreenergy.tv/aaa_sign_full.jpg">AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
 </div><div id='D-16.1' name='D-16.1' style='display:none;'>AAA Membership/Roadside Assistance Programs - Your membership costs totaling $<x>aaa</x> will go on "line 9" of Schedule C form 1040.<br><br>
 </div><div id='Q-16.1' name='Q-16.1' style='display:none;'> Your membership costs totaling $<x>aaa</x> will also go on "line 9" of Schedule C form 1040.
 </div><div id='Q-16.1.1' name='Q-16.1.1' style='display:none;'>GOTO:17
@@ -618,7 +618,7 @@ A:Back
 </div><div id='Q-16.2.1' name='Q-16.2.1' style='display:none;'>GOTO:16
 </div><div id='Q-16.3' name='Q-16.3' style='display:none;'>GOTO:15
 
-</div><div id='Q-17' name='Q-17' style='display:none;'>Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
+</div><div id='Q-17' name='Q-17' style='display:none;'><img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg">Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
 </div><div id='D-17.1' name='D-17.1' style='display:none;'> Parking Fees & Tolls - Your total fees in the amount of $<x>fees</x> will go on "line 9" of Schedule C form 1040.<br><br>*Please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. It is advised that you consult an Accounting Service if you feel you may have a deduction not listed here.<br><br>Thank You for using The Uber Driver Tax Prepper: Knowing your Deductions!
 </div><div id='Q-17.1' name='Q-17.1' style='display:none;'> Your Parking fees and Toll costs totaling $<x>fees</x> will also go on "line 9" of Schedule C form 1040.
 </div><div id='Q-17.1.1' name='Q-17.1.1' style='display:none;'>GOTO:18
@@ -747,7 +747,7 @@ A:Back
 </div><div id='Q-2.2' name='Q-2.2' style='display:none;'> that's Ok, come back when the bills pile up, you might have a change of heart!
 </div><div id='Q-2.3' name='Q-2.3' style='display:none;'>GOTO:1
 
-</div><div id='Q-3' name='Q-3' style='display:none;'> Ok so first off you will need a Schedule C (Form 1040) form to follow along, do you have one?
+</div><div id='Q-3' name='Q-3' style='display:none;'> Ok so first off you will need a Schedule C Form 1040 to follow along, do you have one?
 </div><div id='Q-3.1' name='Q-3.1' style='display:none;'>GOTO:4
 </div><div id='Q-3.2' name='Q-3.2' style='display:none;'>GOTO:4
 </div><div id='Q-3.3' name='Q-3.3' style='display:none;'>GOTO:2	
@@ -758,7 +758,7 @@ A:Back
 
 </div><div id='Q-5' name='Q-5' style='display:none;'>The Standard Mileage Method is the easiest deduction method, but may not give you the best return.<br><br> The current mileage rate for 2015 is 57.5 cents/mile. Add up all your miles and enter it below:
 </div><div id='D-5.1' name='D-5.1' style='display:none;'> STANDARD MILEAGE METHOD <br><br> If you choose this method enter your total mileage of <x>mileage</x> miles on "line 44a" of the Schedule C Form 1040.<br><br>
-</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>Your total mileage of <x>mileage</x> miles will go on "Line 44a of the Schedule C Form." <x>mileage</x> multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income.
+</div><div id='Q-5.1' name='Q-5.1' style='display:none;'>Your total mileage of <x>mileage</x> miles will go on "Line 44a of the Schedule C Form." <x>mileage</x> multiplied by 0.575 would be the amount the Standard Mileage Method can deduct from your taxable income. Compare that amount to The Actual Expenses Method for your best option.
 </div><div id='Q-5.1.1' name='Q-5.1.1' style='display:none;'>Would you like to Proceed to the Actual Expenses Method?
 </div><div id='Q-5.1.1.1' name='Q-5.1.1.1' style='display:none;'>GOTO:6
 </div><div id='Q-5.1.1.2' name='Q-5.1.1.2' style='display:none;'>GOTO:11
@@ -776,7 +776,7 @@ A:Back
 </div><div id='Q-6.1' name='Q-6.1' style='display:none;'>GOTO:7
 </div><div id='Q-6.3' name='Q-6.3' style='display:none;'>GOTO:4
 
-</div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br>Do you own or lease your vehicle that you use for Uber?
+</div><div id='Q-7' name='Q-7' style='display:none;'>Ok great, let's go through the possible deductions.<br><br><img src="http://www.clker.com/cliparts/a/0/d/e/11971194531912449946Chrisdesign_Beetle_(car).svg.hi.png">Do you own or lease the vehicle that you use for Uber?
 </div><div id='Q-7.1' name='Q-7.1' style='display:none;'>Interest Deduction.<br><br>Since your vehicle is a crucial part of driving for Uber, you can deduct that part of the interest expense that represents your business use of the car. Enter that amount below:
 </div><div id='D-7.1.1' name='D-7.1.1' style='display:none;'> Interest Deduction - Your Auto Loan Interest of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.<br><br>
 </div><div id='Q-7.1.1' name='Q-7.1.1' style='display:none;'>Your interest expense of $<x>interest</x> will go on "line 16b" of the Schedule C form 1040.
@@ -797,25 +797,25 @@ A:Back
 </div><div id='Q-7.2.3' name='Q-7.2.3' style='display:none;'>GOTO:7
 </div><div id='Q-7.3' name='Q-7.3' style='display:none;'>GOTO:6
 
-</div><div id='Q-8' name='Q-8' style='display:none;'> Gas/Fuel Costs.<br><br>You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.<br><br>Enter your total gas costs below:
+</div><div id='Q-8' name='Q-8' style='display:none;'> <img src="http://williessupervalu.com/files/williessupervalu/9313/0228/9490/willies_supervalu_pump_perks_logo.png">Gas/Fuel Costs.<br><br>You can deduct gas costs as long as it's business related. This means that you can deduct gas costs that you incur while picking up customers and driving them to their destinations, or driving to meetings with potential drivers that you are trying to recruit.<br><br>Enter your total gas costs below:
 </div><div id='D-8.1' name='D-8.1' style='display:none;'> Gas Costs - Your total of $<x>gas</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-8.1' name='Q-8.1' style='display:none;'>Your gas costs totaling $<x>gas</x> will go on "line 9" of the Schedule C form 1040
 </div><div id='Q-8.1.1' name='Q-8.1.1' style='display:none;'>GOTO:9
 </div><div id='Q-8.1.2' name='Q-8.1.2' style='display:none;'>GOTO:9
-</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time for driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
+</div><div id='Q-8.2' name='Q-8.2' style='display:none;'>Donny uses his car 60% of the time driving for Uber and 40% for personal use. That means he can deduct exactly 60% of his gas costs. So if Donny spent $1500 on gas in 2015, he can deduct $900 (.6 x 1,500 = 900).
 </div><div id='Q-8.2.1' name='Q-8.2.1' style='display:none;'>GOTO:8
 </div><div id='Q-8.3' name='Q-8.3' style='display:none;'>GOTO:7
 
-</div><div id='Q-9' name='Q-9' style='display:none;'> Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
+</div><div id='Q-9' name='Q-9' style='display:none;'> <img src="http://www.machinerytraderparts.com/wp-content/uploads/2013/05/car-repair-13570738.jpg">Maintenance Costs.<br><br>Since you are probably using your vehicle for a combination of business and personal use, you will be able to deduct a proportion of your maintenance costs at tax time. This includes oil changes, tire rotations, inspecting and replacing brake pads, and anything else required to keep your car running smoothly.<br><br>Enter your Maintenance Costs below, if none, type "0":
 </div><div id='D-9.1' name='D-9.1' style='display:none;'>Auto Maintenance Expenses - Your costs totaling $<x>maintenance</x> in expenses will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-9.1' name='Q-9.1' style='display:none;'> Your Maintenance Costs totaling $<x>maintenance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-9.1.1' name='Q-9.1.1' style='display:none;'>GOTO:10
 </div><div id='Q-9.1.2' name='Q-9.1.2' style='display:none;'>GOTO:10
-</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time for driving for Uber, he can deduct $150 off of the total cost to replace the tires.
+</div><div id='Q-9.2' name='Q-9.2' style='display:none;'>In 2015, Carlos had to buy 2 new rear tires, which cost him $300 to purchase and install. If heâ��s using his car 50% of the time driving for Uber, he can deduct $150 off of the total cost to replace the tires.
 </div><div id='Q-9.2.1' name='Q-9.2.1' style='display:none;'>GOTO:9
 </div><div id='Q-9.3' name='Q-9.3' style='display:none;'>GOTO:8
 
-</div><div id='Q-10' name='Q-10' style='display:none;'>Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber, I hope you are not driving without it! Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
+</div><div id='Q-10' name='Q-10' style='display:none;'><img src="http://auto-insurance-quotes-florida.com/images/image/Online%20Auto%20Insurance%20Quotes%20Florida.jpg">Car Insurance.<br><br>Car insurance is just another critical cost of driving for Uber(I hope you are not driving without it!). Like other actual expense deductions, remember that you can only deduct the amount proportionate to your business usage.<br><br>Enter your car insurance costs below:
 </div><div id='D-10.1' name='D-10.1' style='display:none;'> Car Insurance Costs - Your insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.<br><br>
 </div><div id='Q-10.1' name='Q-10.1' style='display:none;'> Your Insurance costs totaling $<x>insurance</x> will go on "line 9" of the Schedule C form 1040.
 </div><div id='Q-10.1.1' name='Q-10.1.1' style='display:none;'>GOTO:11
@@ -824,12 +824,12 @@ A:Back
 </div><div id='Q-10.2.1' name='Q-10.2.1' style='display:none;'>GOTO:9
 </div><div id='Q-10.3' name='Q-10.3' style='display:none;'>GOTO:9
 
-</div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to your driving business can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses when it comes to tax time as long as they are considered "ordinary and necessary".
+</div><div id='Q-11' name='Q-11' style='display:none;'>In addition to using the Standard Mileage or Actual Expenses deduction method, all the money you spend that is directly related to driving for Uber can be deducted when it comes time to file your taxes.<br><br>You can deduct a number of operating expenses as long as they are considered "ordinary and necessary".
 </div><div id='Q-11.1' name='Q-11.1' style='display:none;'>The IRS defines "ordinary and necessary" as the following: "An ordinary expense is one that is common and accepted in your industry. A necessary expense is one that is helpful and appropriate for your trade or business. An expense does not have to be indispensable to be considered necessary." <br><br>This may sound complicated, but I'll break the common individual deductions down for you now, so you do not have to untangle the terminology on your own.
 </div><div id='D-11.1.1' name='D-11.1.1' style='display:none;'>COMMON OPERATING EXPENSES<br><br> The following deductions may be made in addition to your choice of the Standard Mileage or Actual Expenses Deduction:<br><br>
 </div><div id='Q-11.1.1' name='Q-11.1.1' style='display:none;'>GOTO:12
-</div><div id='Q-12' name='Q-12' style='display:none;'>Mobile Phone.<br><br>As an Uber driver, your mobile phone is the control center of your business.That new smartphone you have purchased for work, it is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.<br><br>Enter costs below:
-</div><div id='D-12.1' name='D-12.1' style='display:none;'> Mobile Phone Costs:<br><br>Device Expenses - your device expenses totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.<br><br>
+</div><div id='Q-12' name='Q-12' style='display:none;'><img src="https://media3.giphy.com/media/12kn6hR2uOvf1u/200.gif">Mobile Phone<br><br>As an Uber driver, your mobile phone is the control center of your business.That means that new smartphone you've purchased for work is deductible! The only caveat is that if the phone was initially purchased for personal use, you can only take a deduction for the time you used it for work.<br><br>Enter costs below:
+</div><div id='D-12.1' name='D-12.1' style='display:none;'>Mobile Device Expenses - your device expenses totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.<br><br>
 </div><div id='Q-12.1' name='Q-12.1' style='display:none;'>Your mobile phone costs totaling $<x>phone</x> will go on "line 22" of the Schedule C form 1040.
 </div><div id='Q-12.1.1' name='Q-12.1.1' style='display:none;'>GOTO:13
 </div><div id='Q-12.1.2' name='Q-12.1.2' style='display:none;'>GOTO:13
@@ -837,7 +837,7 @@ A:Back
 </div><div id='Q-12.2.1' name='Q-12.2.1' style='display:none;'>GOTO:12
 </div><div id='Q-12.3' name='Q-12.3' style='display:none;'>GOTO:11
 
-</div><div id='Q-13' name='Q-13' style='display:none;'>Wireless Phone Plan.<br><br>In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.<br><br>Enter your wireless plan costs below:
+</div><div id='Q-13' name='Q-13' style='display:none;'><img src="http://citizensutilityboard.org/images/CellPhoneBill.jpg">Wireless Phone Plan.<br><br>In addition to your mobile device, your wireless plan is also deductible. Whether you have a separate line just for Uber or a line you split for personal use, you can deduct the appropriate amount off your taxes including any activation fees. Again, you may only deduct the percentage related to your use during your Uber driving.<br><br>Enter your wireless plan costs below:
 </div><div id='D-13.1' name='D-13.1' style='display:none;'> Wireless Phone Plan - Your wireless plan costs totaling $<x>wireless</x> will go on "line 25" of Schedule C form 1040.<br><br>
 </div><div id='Q-13.1' name='Q-13.1' style='display:none;'> Your wireless plan costs totaling $<x>wireless</x> will go on "line 25" of Schedule C form 1040.
 </div><div id='Q-13.1.1' name='Q-13.1.1' style='display:none;'>GOTO:14
@@ -846,7 +846,7 @@ A:Back
 </div><div id='Q-13.2.1' name='Q-13.2.1' style='display:none;'>GOTO:13
 </div><div id='Q-13.3' name='Q-13.3' style='display:none;'>GOTO:12
 
-</div><div id='Q-14' name='Q-14' style='display:none;'>Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
+</div><div id='Q-14' name='Q-14' style='display:none;'><img src="https://media1.giphy.com/media/wsiracO7S5BiU/200.gif">Food & Drink for Customers.<br><br>The IRS says that you can deduct business related entertainment expenses you have for entertaining a client, customer, or employee. That includes the food and drinks you purchase for your passengers, as well as lunches with potential drivers you are recruiting and networking with existing drivers. However, keep in mind that you can generally only deduct 50% of business Â­related food and drinks.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-14.1' name='D-14.1' style='display:none;'> Food & Drink Expenses - Your total costs for food and drinks for customers of $<x>food</x> will go on "line 24b" of Schedule C form 1040.<br><br>
 </div><div id='Q-14.1' name='Q-14.1' style='display:none;'> Your Food & Drink costs totaling $<x>food</x> will go on "line 24b" of Schedule C form 1040.
 </div><div id='Q-14.1.1' name='Q-14.1.1' style='display:none;'>GOTO:15
@@ -855,7 +855,7 @@ A:Back
 </div><div id='Q-14.2.1' name='Q-14.2.1' style='display:none;'>GOTO:14
 </div><div id='Q-14.3' name='Q-14.3' style='display:none;'>GOTO:13
 
-</div><div id='Q-15' name='Q-15' style='display:none;'> Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
+</div><div id='Q-15' name='Q-15' style='display:none;'> <img src="https://media0.giphy.com/media/ZBTLFVmvzxyBW/200.gif">Car Washes.<br><br>As an Uber driver, you must provide your vehicle with car washes to keep customers happy. Because car washes are considered part of your business's "ordinary and necessary" operating expenses, you can deduct a portion of those expenses on your tax return.<br><br>Find those receipts and enter those costs below:
 </div><div id='D-15.1' name='D-15.1' style='display:none;'>Car Wash Expenses - Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.<br><br>
 </div><div id='Q-15.1' name='Q-15.1' style='display:none;'> Your Car Wash costs totaling $<x>carwash</x> will go on "line 9" of Schedule C form 1040.
 </div><div id='Q-15.1.1' name='Q-15.1.1' style='display:none;'>GOTO:16
@@ -864,7 +864,7 @@ A:Back
 </div><div id='Q-15.2.1' name='Q-15.2.1' style='display:none;'>GOTO:15
 </div><div id='Q-15.3' name='Q-15.3' style='display:none;'>GOTO:14
 
-</div><div id='Q-16' name='Q-16' style='display:none;'>AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
+</div><div id='Q-16' name='Q-16' style='display:none;'><img src="http://www.moreenergy.tv/aaa_sign_full.jpg">AAA Membership/Roadside Assistence.<br><br>If you purchased a AAA membership or other similar roadside assistance plan because of driving for Uber and don't use it during a personal trip then you can deduct the cost of the plan.<br><br>Enter those costs below:
 </div><div id='D-16.1' name='D-16.1' style='display:none;'>AAA Membership/Roadside Assistance Programs - Your membership costs totaling $<x>aaa</x> will go on "line 9" of Schedule C form 1040.<br><br>
 </div><div id='Q-16.1' name='Q-16.1' style='display:none;'> Your membership costs totaling $<x>aaa</x> will also go on "line 9" of Schedule C form 1040.
 </div><div id='Q-16.1.1' name='Q-16.1.1' style='display:none;'>GOTO:17
@@ -873,7 +873,7 @@ A:Back
 </div><div id='Q-16.2.1' name='Q-16.2.1' style='display:none;'>GOTO:16
 </div><div id='Q-16.3' name='Q-16.3' style='display:none;'>GOTO:15
 
-</div><div id='Q-17' name='Q-17' style='display:none;'>Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
+</div><div id='Q-17' name='Q-17' style='display:none;'><img src="http://media.nj.com/ledgerupdates_impact/photo/2011/09/9977417-large.jpg">Parking Fees & Tolls.<br><br> Parking Fees and tolls are also deductible as a common operating expense. Just make sure you are only deducting the cost of tolls you pass through while driving for Uber.<br><br>Enter those total costs below:
 </div><div id='D-17.1' name='D-17.1' style='display:none;'> Parking Fees & Tolls - Your total fees in the amount of $<x>fees</x> will go on "line 9" of Schedule C form 1040.<br><br>*Please note that there may be other expenses unique to your situation that you may be able to deduct from your taxes on top of these. It is advised that you consult an Accounting Service if you feel you may have a deduction not listed here.<br><br>Thank You for using The Uber Driver Tax Prepper: Knowing your Deductions!
 </div><div id='Q-17.1' name='Q-17.1' style='display:none;'> Your Parking fees and Toll costs totaling $<x>fees</x> will also go on "line 9" of Schedule C form 1040.
 </div><div id='Q-17.1.1' name='Q-17.1.1' style='display:none;'>GOTO:18
